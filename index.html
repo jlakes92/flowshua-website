@@ -331,9 +331,9 @@
           <p>Flowshua Projects is currently developing portfolio-based operational solutions for property management, vacation rental, service, and project-based teams. Discovery conversations help identify where workflow visibility, handoffs, vendor coordination, and standardization create the most friction.</p>
         </div>
         <div class="contact-card">
-          <b>Website contact setup placeholder</b>
-          <p>This first version is ready for a live contact form or a Flowshua business email once hosting is connected. The page structure is already built.</p>
-          <button id="show-contact">Copy contact setup note</button>
+          <b>Get in touch</b>
+          <p>For portfolio questions, collaboration, or to discuss a workflow challenge, email Flowshua Projects directly.</p>
+          <button id="show-contact">Email Flowshua Projects</button>
         </div>
       </div>
     </section>
@@ -361,10 +361,9 @@
     menu.addEventListener('click', () => links.classList.toggle('mobile-open'));
     document.querySelectorAll('#site-links a').forEach(a => a.addEventListener('click', () => links.classList.remove('mobile-open')));
 
-    const modal = document.getElementById('contact-modal');
-    document.getElementById('show-contact').addEventListener('click', () => modal.classList.add('show'));
-    document.getElementById('close-modal').addEventListener('click', () => modal.classList.remove('show'));
-    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
+  document.getElementById('show-contact').addEventListener('click', () => {
+  window.location.href = 'mailto:flowshuaprojects@gmail.com?subject=Flowshua%20Projects%20Inquiry';
+});
   </script>
 </body>
 </html>
