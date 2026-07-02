@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flowshua Projects builds clearer workflows, stronger project systems, and practical operations tools for service-based teams.">
+  <title>Flowshua Projects | Clearer workflows. Stronger execution.</title>
+  <style>
+    :root{
+      --ink:#202422;
+      --ink-2:#303630;
+      --cream:#f8f4eb;
+      --paper:#fffdf8;
+      --sand:#ebdfcd;
+      --tan:#c9a978;
+      --gold:#b4873e;
+      --sage:#dce8dd;
+      --sage-ink:#315b3b;
+      --line:#dfd5c5;
+      --muted:#70766f;
+      --shadow:0 18px 48px rgba(47,37,21,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(248,244,235,.90);backdrop-filter:blur(15px);border-bottom:1px solid rgba(223,213,197,.8)}
+    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px}
+    .mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#ecd9b9,#bd9360);color:var(--ink);font-weight:900;font-size:21px}
+    .brand span{display:block;font-size:12px;font-weight:650;letter-spacing:.03em;color:var(--muted)}
+    .links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700;color:#50574f}
+    .links a:hover{color:var(--gold)}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-weight:800;border:0;cursor:pointer;transition:.2s ease}
+    .nav-cta{background:var(--ink);color:white;padding:10px 14px;font-size:13px}
+    .nav-cta:hover,.button.primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(32,36,34,.18)}
+    .mobile-menu{display:none;background:transparent;border:0;font-size:24px;color:var(--ink)}
+
+    .hero{padding:80px 0 50px;background:radial-gradient(circle at 85% 15%,rgba(201,169,120,.30),transparent 25%),linear-gradient(180deg,#fbf7f0 0%,var(--cream) 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-size:11px;font-weight:900}
+    .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+    h1{font-size:clamp(41px,5.2vw,70px);line-height:1.03;letter-spacing:-2.6px;margin:16px 0 20px;max-width:760px}
+    .hero h1 em{font-style:normal;color:var(--gold)}
+    .lead{max-width:630px;font-size:18px;color:#5c625d;margin:0 0 28px;line-height:1.65}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:11px}
+    .button{padding:13px 17px;font-size:14px}
+    .primary{background:var(--ink);color:#fffdf8}
+    .secondary{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+    .secondary:hover{background:#f3ecdf}
+    .hero-note{margin-top:18px;font-size:12px;color:var(--muted)}
+    .hero-card{background:var(--ink);color:#fdf9f2;border-radius:22px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card:after{content:"";position:absolute;inset:auto -70px -130px auto;width:270px;height:270px;border:1px solid rgba(232,207,164,.32);border-radius:50%}
+    .card-eyebrow{color:#deb774;text-transform:uppercase;letter-spacing:.11em;font-size:10px;font-weight:900}
+    .hero-card h2{font-size:25px;line-height:1.14;letter-spacing:-.8px;margin:10px 0 18px;max-width:340px;position:relative;z-index:1}
+    .workflow{display:grid;gap:9px;position:relative;z-index:1}
+    .workflow-row{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.10);border-radius:11px;padding:12px;display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center}
+    .workflow-row b{font-size:12px}
+    .workflow-row span{font-size:11px;color:#d2d0ca}
+    .mini-status{font-size:10px;padding:4px 7px;border-radius:999px;font-weight:850}
+    .ready{background:#dbe9dc;color:#315b3b}
+    .watch{background:#f5e4ba;color:#7c5718}
+    .risk{background:#efd6d2;color:#8d3f37}
+    .mini-number{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#4a4740;color:#e9c58b;font-weight:900;font-size:11px}
+
+    .trust{padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,253,248,.55)}
+    .trust-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .trust-item{display:flex;gap:12px;align-items:flex-start;padding:8px 0}
+    .trust-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--sand);color:#6c5128;font-size:17px;flex:none}
+    .trust-item b{display:block;font-size:13px}
+    .trust-item span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+    section{padding:86px 0}
+    .section-head{max-width:700px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-1.5px;margin:12px 0 12px}
+    .section-head p{font-size:16px;color:var(--muted);margin:0;line-height:1.65}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 22px rgba(48,37,21,.05)}
+    .service-num{font-size:11px;color:var(--gold);font-weight:900;letter-spacing:.1em}
+    .service h3{font-size:18px;margin:13px 0 9px;letter-spacing:-.4px}
+    .service p{font-size:13px;color:var(--muted);margin:0;line-height:1.6}
+    .service ul{padding:0;margin:16px 0 0;list-style:none;display:grid;gap:8px}
+    .service li{font-size:12px;color:#4f554f}
+    .service li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:8px}
+
+    .portfolio{background:var(--ink);color:#f9f4eb}
+    .portfolio .section-head p{color:#cbc6bc}
+    .portfolio-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:stretch}
+    .case-card{background:#faf6ee;color:var(--ink);border-radius:18px;padding:28px;position:relative;overflow:hidden}
+    .case-card:before{content:"F";position:absolute;right:-18px;top:-48px;font-size:200px;line-height:1;color:rgba(201,169,120,.16);font-weight:900}
+    .label{display:inline-flex;align-items:center;border:1px solid #d9c39b;color:#77562a;background:#f5ead4;border-radius:999px;padding:6px 9px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:900}
+    .case-card h3{font-size:27px;line-height:1.08;letter-spacing:-1px;margin:16px 0 12px;max-width:440px;position:relative}
+    .case-card p{font-size:14px;color:#626762;max-width:480px;line-height:1.65;position:relative}
+    .case-links{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;position:relative}
+    .case-link{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fffdf8;border-radius:10px;padding:11px 13px;font-size:13px;font-weight:800}
+    .case-link.light{background:#efe3cb;color:#684f28}
+    .dashboard-preview{border-radius:18px;background:linear-gradient(160deg,#333833,#1e221f);border:1px solid rgba(255,255,255,.12);padding:20px;overflow:hidden}
+    .preview-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;color:#f4efe6;font-size:12px;font-weight:800}
+    .preview-top span{color:#c7b080;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .preview-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .preview-kpi{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:11px;padding:13px}
+    .preview-kpi small{color:#c3c0b7;font-size:10px;display:block}
+    .preview-kpi b{display:block;font-size:23px;margin-top:4px;color:#fff9ef}
+    .preview-panel{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:11px;padding:13px;margin-top:10px}
+    .preview-panel h4{margin:0 0 12px;font-size:11px;color:#f4efe6}
+    .bar-row{display:grid;grid-template-columns:75px 1fr 15px;gap:7px;align-items:center;margin:8px 0;font-size:10px;color:#d5d2ca}
+    .bar{height:8px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden}
+    .bar i{display:block;height:100%;border-radius:999px}
+
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:var(--paper)}
+    .process{padding:24px 20px;border-right:1px solid var(--line)}
+    .process:last-child{border-right:0}
+    .process b{display:inline-grid;place-items:center;width:32px;height:32px;background:var(--sand);border-radius:50%;font-size:12px;color:#684d26}
+    .process h3{font-size:15px;margin:14px 0 7px}
+    .process p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+
+    .about{background:#eee3d0}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+    .about-symbol{display:grid;place-items:center;width:min(330px,100%);aspect-ratio:1;border-radius:28px;background:var(--ink);color:#e6c183;font-size:170px;font-weight:900;box-shadow:var(--shadow)}
+    .about-copy h2{font-size:clamp(32px,4vw,48px);line-height:1.06;letter-spacing:-1.5px;margin:12px 0 15px}
+    .about-copy p{font-size:15px;color:#565b55;line-height:1.7;margin:0 0 15px;max-width:600px}
+    .credentials{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .credential{background:#f7f2e8;border:1px solid #d7c7ae;color:#604d2b;border-radius:999px;font-size:11px;font-weight:800;padding:7px 10px}
+
+    .contact{padding:80px 0;background:var(--ink);color:#f9f4eb}
+    .contact-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:end}
+    .contact h2{font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-1.8px;margin:12px 0}
+    .contact p{color:#cbc6bc;font-size:15px;line-height:1.7;max-width:670px;margin:0}
+    .contact-card{background:#303630;border:1px solid rgba(255,255,255,.1);border-radius:15px;padding:20px}
+    .contact-card b{display:block;font-size:14px;margin-bottom:7px}
+    .contact-card p{font-size:12px;margin-bottom:14px}
+    .contact-card button{width:100%;background:#e5c184;color:#2b2b27;padding:12px;border:0;border-radius:10px;font-weight:900;cursor:pointer}
+    footer{background:#171a18;color:#bbb6ad;padding:20px 0;font-size:12px}
+    .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+    .modal{display:none;position:fixed;inset:0;background:rgba(16,18,17,.60);z-index:50;padding:18px;align-items:center;justify-content:center}
+    .modal.show{display:flex}
+    .modal-box{background:var(--paper);border-radius:17px;max-width:500px;width:100%;padding:25px;color:var(--ink);box-shadow:0 24px 70px rgba(0,0,0,.32)}
+    .modal-box h3{margin:0 0 10px;font-size:22px;letter-spacing:-.6px}
+    .modal-box p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .modal-box code{display:block;background:#f2eadf;border:1px solid #e0d2bb;padding:10px;border-radius:8px;margin:14px 0;font-size:12px;color:#5b4424;word-break:break-all}
+    .close{margin-top:16px;width:100%;border:0;background:var(--ink);color:white;border-radius:10px;padding:11px;font-weight:800;cursor:pointer}
+
+    @media(max-width:900px){
+      .hero-grid,.portfolio-grid,.about-grid,.contact-wrap{grid-template-columns:1fr;gap:32px}
+      .service-grid{grid-template-columns:1fr}
+      .process-grid{grid-template-columns:1fr 1fr}
+      .process:nth-child(2){border-right:0}
+      .process:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .about-symbol{width:190px}
+    }
+    @media(max-width:700px){
+      .nav-inner{height:68px}
+      .links,.nav-cta{display:none}
+      .mobile-menu{display:block}
+      .links.mobile-open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 24px}
+      .links.mobile-open a{padding:10px 0}
+      .hero{padding-top:60px}
+      h1{letter-spacing:-1.7px}
+      section{padding:64px 0}
+      .trust-inner{grid-template-columns:1fr}
+      .process-grid{grid-template-columns:1fr}
+      .process{border-right:0;border-bottom:1px solid var(--line)}
+      .process:last-child{border-bottom:0}
+      .process:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .wrap{padding:0 17px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Flowshua Projects Home">
+        <div class="mark">F</div>
+        <div>Flowshua <span>Projects</span></div>
+      </a>
+      <div class="links" id="site-links">
+        <a href="#approach">How It Helps</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="ops-hub/index.html">Open Ops Hub Demo ↗</a>
+      <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Project Management · Operations · Process Improvement</div>
+          <h1>Clearer workflows.<br><em>Stronger execution.</em></h1>
+          <p class="lead">Flowshua Projects develops practical operating systems for service-based teams—bringing structure to handoffs, project visibility, repeatable processes, and day-to-day execution.</p>
+          <div class="hero-buttons">
+            <a class="button primary" href="#portfolio">Explore the portfolio</a>
+            <a class="button secondary" href="ops-hub/index.html">Open Ops Hub demo ↗</a>
+          </div>
+          <p class="hero-note">Virginia Beach–based · Veteran-owned · Portfolio-based solutions in development</p>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-eyebrow">Featured operations workflow</div>
+          <h2>Turnovers, maintenance, vendor updates, and guest-ready approvals—in one clear view.</h2>
+          <div class="workflow">
+            <div class="workflow-row"><div class="mini-number">01</div><div><b>Housekeeping</b><br><span>Completion and issue capture</span></div><span class="mini-status ready">Complete</span></div>
+            <div class="workflow-row"><div class="mini-number">02</div><div><b>Inspection</b><br><span>Property condition verification</span></div><span class="mini-status watch">Pending</span></div>
+            <div class="workflow-row"><div class="mini-number">03</div><div><b>Maintenance</b><br><span>Escalation and vendor ownership</span></div><span class="mini-status risk">Urgent</span></div>
+            <div class="workflow-row"><div class="mini-number">04</div><div><b>Final approval</b><br><span>Clear guest-ready decision</span></div><span class="mini-status watch">In review</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap trust-inner">
+        <div class="trust-item"><div class="trust-icon">↔</div><div><b>Clear ownership</b><span>Defined responsibilities at each handoff.</span></div></div>
+        <div class="trust-item"><div class="trust-icon">◫</div><div><b>Operational visibility</b><span>Shared status tracking that makes work visible.</span></div></div>
+        <div class="trust-item"><div class="trust-icon">✓</div><div><b>Repeatable execution</b><span>SOPs and practical tools teams can actually use.</span></div></div>
+      </div>
+    </div>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What Flowshua builds</div>
+          <h2>Systems that help work move forward.</h2>
+          <p>Flowshua translates messy, fast-moving work into clearer workflows, practical tools, and shared operating standards. The focus is not technology for technology’s sake—it is making execution easier to manage.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <div class="service-num">01 · WORKFLOW DESIGN</div>
+            <h3>Clear handoffs and ownership</h3>
+            <p>Map how work actually moves today, identify friction, and define the next best step for every role.</p>
+            <ul><li>Current-state workflow maps</li><li>Ownership and escalation points</li><li>Practical improvement roadmaps</li></ul>
+          </article>
+          <article class="service">
+            <div class="service-num">02 · OPERATIONS SYSTEMS</div>
+            <h3>One shared view of execution</h3>
+            <p>Build trackers, dashboards, and coordination tools that give teams a visible source of truth.</p>
+            <ul><li>Project and operations trackers</li><li>Maintenance / vendor coordination</li><li>KPI visibility and management readouts</li></ul>
+          </article>
+          <article class="service">
+            <div class="service-num">03 · PROCESS STANDARDIZATION</div>
+            <h3>Repeatable work, less rework</h3>
+            <p>Create simple standards that help teams deliver a consistent outcome without relying on scattered texts and verbal memory.</p>
+            <ul><li>Standard operating procedures</li><li>Checklists and handoff guides</li><li>Implementation and adoption support</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Featured portfolio case study</div>
+          <h2>From scattered handoffs to a guest-ready operating system.</h2>
+          <p>This fictional scenario demonstrates the Flowshua approach to a 45-property vacation-rental operation managing turnovers, inspections, maintenance, vendors, and guest readiness.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="case-card">
+            <span class="label">Fictional portfolio case study</span>
+            <h3>Vacation-Rental Turnover & Maintenance Operations System</h3>
+            <p>Designed as a practical response to fragmented calls, texts, spreadsheets, unclear ownership, late escalation, and limited day-of visibility during peak operations.</p>
+            <div class="case-links">
+              <a class="case-link" href="ops-hub/index.html">View Ops Hub prototype ↗</a>
+              <a class="case-link light" href="#process">How it was designed</a>
+            </div>
+          </article>
+
+          <div class="dashboard-preview" aria-label="Illustrative dashboard preview">
+            <div class="preview-top"><div>Flowshua Ops Hub</div><span>Demo workspace</span></div>
+            <div class="preview-kpis">
+              <div class="preview-kpi"><small>Guest-ready rate</small><b>38%</b></div>
+              <div class="preview-kpi"><small>At-risk properties</small><b style="color:#edb1a9">2</b></div>
+              <div class="preview-kpi"><small>Urgent maintenance</small><b style="color:#edb1a9">2</b></div>
+              <div class="preview-kpi"><small>Turns in progress</small><b style="color:#ecd39c">3</b></div>
+            </div>
+            <div class="preview-panel">
+              <h4>Turnover readiness</h4>
+              <div class="bar-row"><span>Guest Ready</span><div class="bar"><i style="width:38%;background:#78a77b"></i></div><span>3</span></div>
+              <div class="bar-row"><span>In Progress</span><div class="bar"><i style="width:38%;background:#c69b57"></i></div><span>3</span></div>
+              <div class="bar-row"><span>At Risk</span><div class="bar"><i style="width:25%;background:#c47165"></i></div><span>2</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">The Flowshua approach</div>
+          <h2>Build practical systems around how the work really happens.</h2>
+          <p>Strong operations systems begin with the problem—not a generic template or an app someone has to force into their day.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process"><b>01</b><h3>Understand the current state</h3><p>Identify current handoffs, tools, ownership gaps, bottlenecks, and recurring pain points.</p></div>
+          <div class="process"><b>02</b><h3>Define a clearer workflow</h3><p>Clarify responsibilities, decision points, service levels, escalation paths, and intended outcomes.</p></div>
+          <div class="process"><b>03</b><h3>Build the operating tools</h3><p>Create trackers, dashboards, SOPs, checklists, or an operations workspace around the real workflow.</p></div>
+          <div class="process"><b>04</b><h3>Support execution</h3><p>Make the system practical enough for teams to use, refine, and rely on during daily operations.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-symbol">F</div>
+        <div class="about-copy">
+          <div class="eyebrow">About Flowshua Projects</div>
+          <h2>Built from an operations-first mindset.</h2>
+          <p>Flowshua Projects is a Virginia Beach–based, veteran-owned project and operations practice. It is being developed by Josh Lakes, PMP, whose background in technical operations, maintenance supervision, documentation, quality assurance, and project coordination shapes the work.</p>
+          <p>The goal is simple: help teams build clearer workflows, stronger project systems, and repeatable operating processes that make work easier to see, manage, and complete.</p>
+          <div class="credentials">
+            <span class="credential">PMP Certified</span>
+            <span class="credential">Technical Operations Background</span>
+            <span class="credential">Project & Operations Management</span>
+            <span class="credential">Virginia Beach, VA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-wrap">
+        <div>
+          <div class="eyebrow">Start a conversation</div>
+          <h2>What would run better with a clearer system?</h2>
+          <p>Flowshua Projects is currently developing portfolio-based operational solutions for property management, vacation rental, service, and project-based teams. Discovery conversations help identify where workflow visibility, handoffs, vendor coordination, and standardization create the most friction.</p>
+        </div>
+        <div class="contact-card">
+          <b>Website contact setup placeholder</b>
+          <p>This first version is ready for a live contact form or a Flowshua business email once hosting is connected. The page structure is already built.</p>
+          <button id="show-contact">Copy contact setup note</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© 2026 Flowshua Projects</span>
+      <span>Clearer workflows. Stronger execution.</span>
+    </div>
+  </footer>
+
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <h3 id="modal-title">Contact form setup is the next live step.</h3>
+      <p>Before launch, replace the placeholder with either a business email address or a hosted contact form. This keeps the site honest and avoids publishing a form that does not actually reach you.</p>
+      <code>Replace this section with: hello@yourdomain.com<br>or connect a contact-form service after hosting.</code>
+      <button class="close" id="close-modal">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const links = document.getElementById('site-links');
+    menu.addEventListener('click', () => links.classList.toggle('mobile-open'));
+    document.querySelectorAll('#site-links a').forEach(a => a.addEventListener('click', () => links.classList.remove('mobile-open')));
+
+    const modal = document.getElementById('contact-modal');
+    document.getElementById('show-contact').addEventListener('click', () => modal.classList.add('show'));
+    document.getElementById('close-modal').addEventListener('click', () => modal.classList.remove('show'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
+  </script>
+</body>
+</html>
