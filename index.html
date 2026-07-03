@@ -87,6 +87,7 @@
     .portfolio{background:var(--ink);color:#f9f4eb}
     .portfolio .section-head p{color:#cbc6bc}
     .portfolio-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:stretch}
+    .portfolio-grid + .portfolio-grid{margin-top:24px}
     .case-card{background:#faf6ee;color:var(--ink);border-radius:18px;padding:28px;position:relative;overflow:hidden}
     .case-card:before{content:"F";position:absolute;right:-18px;top:-48px;font-size:200px;line-height:1;color:rgba(201,169,120,.16);font-weight:900}
     .label{display:inline-flex;align-items:center;border:1px solid #d9c39b;color:#77562a;background:#f5ead4;border-radius:999px;padding:6px 9px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:900}
@@ -286,6 +287,35 @@
             </div>
           </div>
         </div>
+
+        <div class="portfolio-grid">
+          <article class="case-card">
+            <span class="label">Portfolio prototype</span>
+            <h3>Flowshua Field Knowledge Playbook</h3>
+            <p><strong>A field knowledge-management concept for trade-service teams.</strong></p>
+            <p>A portfolio prototype designed to help trade-service companies capture recurring field discrepancies, preserve senior technician knowledge, and turn completed service calls into structured learning material for newer employees.</p>
+            <div class="case-links">
+              <a class="case-link" href="field-knowledge-playbook/index.html">View Field Knowledge Playbook ↗</a>
+              <a class="case-link light" href="#process">How it was designed</a>
+            </div>
+          </article>
+
+          <div class="dashboard-preview" aria-label="Illustrative field knowledge playbook preview">
+            <div class="preview-top"><div>Field Knowledge Playbook</div><span>Prototype view</span></div>
+            <div class="preview-kpis">
+              <div class="preview-kpi"><small>Logged discrepancies</small><b>24</b></div>
+              <div class="preview-kpi"><small>Repeat-call risks</small><b style="color:#edb1a9">5</b></div>
+              <div class="preview-kpi"><small>Escalation paths</small><b style="color:#ecd39c">8</b></div>
+              <div class="preview-kpi"><small>Training-ready items</small><b style="color:#bfe0bf">11</b></div>
+            </div>
+            <div class="preview-panel">
+              <h4>Common discrepancy pathways</h4>
+              <div class="bar-row"><span>No cooling</span><div class="bar"><i style="width:72%;background:#78a77b"></i></div><span>9</span></div>
+              <div class="bar-row"><span>Short cycling</span><div class="bar"><i style="width:45%;background:#c69b57"></i></div><span>6</span></div>
+              <div class="bar-row"><span>Drain issue</span><div class="bar"><i style="width:30%;background:#c47165"></i></div><span>4</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -345,15 +375,6 @@
       <span>Clearer workflows. Stronger execution.</span>
     </div>
   </footer>
-
-  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-box">
-      <h3 id="modal-title">Contact form setup is the next live step.</h3>
-      <p>Before launch, replace the placeholder with either a business email address or a hosted contact form. This keeps the site honest and avoids publishing a form that does not actually reach you.</p>
-      <code>Replace this section with: hello@yourdomain.com<br>or connect a contact-form service after hosting.</code>
-      <button class="close" id="close-modal">Got it</button>
-    </div>
-  </div>
 
   <script>
     const menu = document.getElementById('mobile-menu');
