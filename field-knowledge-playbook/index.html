@@ -1,157 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Flowshua Field Knowledge Playbook is a portfolio prototype for capturing recurring field discrepancies and technician knowledge.">
-  <title>Flowshua Field Knowledge Playbook | Flowshua Projects</title>
-  <style>
-    :root{--ink:#202422;--ink-2:#303630;--cream:#f8f4eb;--paper:#fffdf8;--sand:#ebdfcd;--tan:#c9a978;--gold:#b4873e;--sage:#dce8dd;--sage-ink:#315b3b;--line:#dfd5c5;--muted:#70766f;--shadow:0 18px 48px rgba(47,37,21,.10)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-    .nav{position:sticky;top:0;z-index:20;background:rgba(248,244,235,.90);backdrop-filter:blur(15px);border-bottom:1px solid rgba(223,213,197,.8)}
-    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px}
-    .mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#ecd9b9,#bd9360);color:var(--ink);font-weight:900;font-size:21px}
-    .brand span{display:block;font-size:12px;font-weight:650;letter-spacing:.03em;color:var(--muted)}
-    .links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700;color:#50574f}
-    .links a:hover{color:var(--gold)}
-    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-weight:800;border:0;cursor:pointer;transition:.2s ease}
-    .nav-cta{background:var(--ink);color:white;padding:10px 14px;font-size:13px}
-    .nav-cta:hover,.button.primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(32,36,34,.18)}
-    .hero{padding:76px 0 54px;background:radial-gradient(circle at 85% 15%,rgba(201,169,120,.30),transparent 25%),linear-gradient(180deg,#fbf7f0 0%,var(--cream) 100%)}
-    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-size:11px;font-weight:900}
-    .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
-    h1{font-size:clamp(40px,5vw,64px);line-height:1.03;letter-spacing:-2.3px;margin:16px 0 18px;max-width:760px}
-    .lead{max-width:660px;font-size:18px;color:#5c625d;margin:0 0 24px;line-height:1.65}
-    .button{padding:13px 17px;font-size:14px}.primary{background:var(--ink);color:#fffdf8}.secondary{background:var(--paper);color:var(--ink);border:1px solid var(--line)}.secondary:hover{background:#f3ecdf}
-    section{padding:76px 0}.section-head{max-width:760px;margin-bottom:28px}.section-head h2{font-size:clamp(30px,3.6vw,44px);line-height:1.08;letter-spacing:-1.4px;margin:12px 0}.section-head p{font-size:16px;color:var(--muted);margin:0;line-height:1.65}
-    .preview{border-radius:18px;background:linear-gradient(160deg,#333833,#1e221f);border:1px solid rgba(255,255,255,.12);padding:20px;overflow:hidden;box-shadow:var(--shadow)}
-    .preview-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;color:#f4efe6;font-size:12px;font-weight:800}.preview-top span{color:#c7b080;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
-    .preview-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.preview-kpi{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:11px;padding:13px}.preview-kpi small{color:#c3c0b7;font-size:10px;display:block}.preview-kpi b{display:block;font-size:23px;margin-top:4px;color:#fff9ef}
-    .preview-panel{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:11px;padding:13px;margin-top:10px}.preview-panel h4{margin:0 0 12px;font-size:11px;color:#f4efe6}.path{display:grid;gap:8px}.path-row{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:10px;color:#ded9cf;font-size:11px}.path-row b{color:#fff9ef}
-    .content-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:24px;align-items:start}.side-card,.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 22px rgba(48,37,21,.05);padding:24px}.side-card{position:sticky;top:100px}.label{display:inline-flex;align-items:center;border:1px solid #d9c39b;color:#77562a;background:#f5ead4;border-radius:999px;padding:6px 9px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:900}.side-card h2{font-size:22px;line-height:1.12;letter-spacing:-.7px;margin:15px 0 9px}.side-card p,.panel p,.panel li{font-size:14px;color:#626762;line-height:1.68}.workbook-preview{margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}.preview-stack{display:grid;gap:14px;margin-top:14px}.workbook-card{display:block;background:#fbf7f0;border:1px solid #e5d7c4;border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(48,37,21,.06);transition:.2s ease}.workbook-card:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(48,37,21,.10)}.workbook-card figure{margin:0}.workbook-card img{display:block;width:100%;height:auto;background:var(--paper)}.workbook-card figcaption{padding:10px 12px;font-size:12px;font-weight:850;color:#4f554f}.workbook-download{width:100%;margin-top:16px}.panel{margin-bottom:16px}.panel h2{font-size:24px;letter-spacing:-.8px;margin:0 0 10px}.panel ul{padding-left:20px;margin:10px 0 0}.workflow{display:grid;gap:9px;margin-top:14px}.workflow-step{display:grid;grid-template-columns:36px 1fr;gap:11px;align-items:start;background:#f8f1e6;border:1px solid #e5d7c4;border-radius:12px;padding:12px}.workflow-step b:first-child{display:grid;place-items:center;width:30px;height:30px;background:var(--sand);border-radius:50%;font-size:11px;color:#684d26}.workflow-step span{font-size:13px;color:#4f554f;line-height:1.5}.boundary{background:#eee3d0;border-color:#d7c7ae}
-    footer{background:#171a18;color:#bbb6ad;padding:20px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    @media(max-width:900px){.hero-grid,.content-grid{grid-template-columns:1fr}.side-card{position:static}.wrap{padding:0 17px}}
-    @media(max-width:700px){.nav-inner{height:68px}.links{display:none}.hero{padding-top:58px}section{padding:60px 0}h1{letter-spacing:-1.7px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Field Knowledge Playbook | Flowshua</title>
+<link rel="stylesheet" href="../assets/site.css">
+<style>.preview-stack{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.workbook-card figure{margin:0}.workbook-card img{border-radius:14px;border:1px solid var(--taupe);background:white}.workbook-card figcaption{font-weight:900;margin-top:8px}.details summary{cursor:pointer;font-weight:900}@media(max-width:900px){.preview-stack{grid-template-columns:1fr}}</style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="../index.html#home" aria-label="Flowshua Projects Home"><div class="mark">F</div><div>Flowshua <span>Projects</span></div></a>
-      <div class="links"><a href="../index.html#portfolio">Portfolio</a><a href="../index.html#process">Approach</a><a href="../index.html#contact">Contact</a></div>
-      <a class="nav-cta" href="../index.html#portfolio">Back to portfolio</a>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Portfolio prototype</div>
-          <h1>Flowshua Field Knowledge Playbook</h1>
-          <p class="lead">A field knowledge-management concept for trade-service teams.</p>
-          <p class="lead">A practical prototype for capturing recurring discrepancies, preserving senior technician knowledge, and turning completed service calls into structured learning material for newer employees.</p>
-          <a class="button primary" href="#problem">Explore the concept</a>
-          <a class="button secondary" href="../index.html#portfolio">Return to portfolio</a>
-        </div>
-        <div class="preview" aria-label="Illustrative Field Knowledge Playbook dashboard preview">
-          <div class="preview-top"><div>Field Knowledge Playbook</div><span>Illustrative data</span></div>
-          <div class="preview-kpis">
-            <div class="preview-kpi"><small>Recurring issue categories</small><b>7</b></div>
-            <div class="preview-kpi"><small>Repeat-call risks</small><b style="color:#edb1a9">5</b></div>
-            <div class="preview-kpi"><small>Escalation pathways</small><b style="color:#ecd39c">8</b></div>
-            <div class="preview-kpi"><small>Training-ready lessons</small><b style="color:#bfe0bf">11</b></div>
-          </div>
-          <div class="preview-panel">
-            <h4>Sample discrepancy pathway</h4>
-            <div class="path">
-              <div class="path-row"><b>Reported:</b> System not cooling consistently</div>
-              <div class="path-row"><b>Verify:</b> Observations, evidence, and approved checks</div>
-              <div class="path-row"><b>Escalate:</b> Senior review when readings or safety conditions require it</div>
-              <div class="path-row"><b>Learn:</b> Final resolution updates the training pathway</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="problem">
-      <div class="wrap content-grid">
-        <aside class="side-card">
-          <span class="label">Field knowledge system</span>
-          <h2>Capture what experienced teams already know.</h2>
-          <p>This concept keeps the focus on knowledge transfer, documentation, and repeatable learning—not on replacing technical judgment.</p>
-          <div class="workbook-preview" aria-label="Workbook Preview">
-            <span class="label">Workbook Preview</span>
-            <div class="preview-stack">
-              <a class="workbook-card" href="assets/field-knowledge-start-here.png" target="_blank" rel="noopener">
-                <figure>
-                  <img src="assets/field-knowledge-start-here.png" alt="Flowshua Field Knowledge Playbook Start Here workbook page preview">
-                  <figcaption>Start Here</figcaption>
-                </figure>
-              </a>
-              <a class="workbook-card" href="assets/field-knowledge-dashboard.png" target="_blank" rel="noopener">
-                <figure>
-                  <img src="assets/field-knowledge-dashboard.png" alt="Flowshua Field Knowledge Playbook Dashboard workbook page preview">
-                  <figcaption>Dashboard</figcaption>
-                </figure>
-              </a>
-              <a class="workbook-card" href="assets/field-knowledge-discrepancy-log.png" target="_blank" rel="noopener">
-                <figure>
-                  <img src="assets/field-knowledge-discrepancy-log.png" alt="Flowshua Field Knowledge Playbook Discrepancy Log workbook page preview">
-                  <figcaption>Discrepancy Log</figcaption>
-                </figure>
-              </a>
-            </div>
-            <a class="button primary workbook-download" href="assets/Flowshua Field Knowledge Portfolio Preview.pdf" target="_blank" rel="noopener">Download Sample Workbook</a>
-          </div>
-        </aside>
-        <div>
-          <article class="panel">
-            <h2>The operational problem</h2>
-            <p>Experienced technicians often carry years of practical knowledge that is difficult to transfer consistently. New employees may learn through informal handoffs, repeat questions, and trial and error. This concept is designed to help teams capture recurring discrepancies, document proven escalation paths, and turn completed service calls into a more structured learning resource.</p>
-          </article>
-          <article class="panel">
-            <h2>How the system works</h2>
-            <p>Customer-reported issue → technician observations → likely causes ranked by company experience → approved verification process → escalation when needed → final resolution → lessons learned → updated training pathway.</p>
-          </article>
-          <article class="panel">
-            <h2>What the workbook includes</h2>
-            <ul>
-              <li>A discrepancy log for recurring service issues</li>
-              <li>Common discrepancy pathways with cause ranking, escalation points, evidence requirements, and coaching focus</li>
-              <li>A dashboard for recurring issue categories, repeat-call risk, escalations, and training readiness</li>
-              <li>Editable dropdown lists that can be adapted for HVAC, plumbing, electrical, facilities, propane, or other trade-service teams</li>
-            </ul>
-          </article>
-          <article class="panel">
-            <h2>Example workflow</h2>
-            <div class="workflow">
-              <div class="workflow-step"><b>01</b><span>Log the customer-reported issue and the conditions observed in the field.</span></div>
-              <div class="workflow-step"><b>02</b><span>Connect the issue to common discrepancy pathways and likely causes based on company experience.</span></div>
-              <div class="workflow-step"><b>03</b><span>Document required evidence, approved verification steps, and the point where escalation is needed.</span></div>
-              <div class="workflow-step"><b>04</b><span>Record the final resolution and convert useful lessons into coaching notes for future onboarding.</span></div>
-            </div>
-          </article>
-          <article class="panel">
-            <h2>Potential business value</h2>
-            <p>Designed to support more consistent onboarding, preserve senior technician knowledge, improve documentation quality, identify recurring issues, and help leaders focus training where it is needed most.</p>
-          </article>
-          <article class="panel boundary">
-            <h2>Important boundaries</h2>
-            <p>This portfolio project uses illustrative HVAC service data to demonstrate a field knowledge-management workflow. It is not a repair manual or a substitute for qualified technical judgment, manufacturer documentation, applicable codes, licensing requirements, or company safety procedures.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="wrap foot"><span>© 2026 Flowshua Projects</span><span>Clearer workflows. Stronger execution.</span></div></footer>
+<header class="site-header">
+<div class="wrap nav-inner">
+<a class="brand" href="../index.html#home">
+<img class="brand-logo" src="../assets/flowshua-logo.jpg" alt="Flowshua logo">
+</a>
+<nav class="nav-links" id="site-links">
+<a href="../index.html#approach">How It Helps</a>
+<a href="../index.html#portfolio">Portfolio</a>
+<a href="../index.html#about">About</a>
+<a href="../index.html#contact">Contact</a>
+</nav>
+<a class="nav-cta" href="../index.html#portfolio">Back to Portfolio</a>
+<button class="mobile-menu" data-mobile-menu aria-label="Open navigation">☰</button>
+</div>
+</header>
+<main>
+<section class="project-hero">
+<div class="wrap">
+<a class="button secondary" href="../index.html#portfolio">Back to Portfolio</a>
+<p>
+</p>
+<span class="label">Knowledge management system</span>
+<h1>Field Knowledge Playbook</h1>
+<p class="lead">A practical workbook concept for helping service teams capture recurring issues, preserve experienced technician knowledge, and turn completed work into better training.</p>
+<div class="boundary">This is an illustrative portfolio example using fictional service data. It is not a repair manual or a substitute for qualified technical judgment, manufacturer documentation, applicable codes, licensing requirements, or company safety procedures.</div>
+</div>
+</section>
+<section class="section">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Workbook Preview</div>
+<h2>Document-based knowledge capture.</h2>
+<p class="muted">Click any preview to open the full-size image in a new tab.</p>
+</div>
+<div class="preview-stack">
+<a class="card workbook-card" href="assets/field-knowledge-start-here.png" target="_blank" rel="noopener">
+<figure>
+<img src="assets/field-knowledge-start-here.png" alt="Start Here workbook preview for Field Knowledge Playbook">
+<figcaption>Start Here</figcaption>
+</figure>
+</a>
+<a class="card workbook-card" href="assets/field-knowledge-dashboard.png" target="_blank" rel="noopener">
+<figure>
+<img src="assets/field-knowledge-dashboard.png" alt="Dashboard workbook preview for Field Knowledge Playbook">
+<figcaption>Dashboard</figcaption>
+</figure>
+</a>
+<a class="card workbook-card" href="assets/field-knowledge-discrepancy-log.png" target="_blank" rel="noopener">
+<figure>
+<img src="assets/field-knowledge-discrepancy-log.png" alt="Discrepancy Log workbook preview for Field Knowledge Playbook">
+<figcaption>Discrepancy Log</figcaption>
+</figure>
+</a>
+</div>
+<p>
+<a class="button primary" href="assets/Flowshua Field Knowledge Portfolio Preview.pdf" target="_blank" rel="noopener">Download Sample Workbook</a>
+</p>
+<p class="note">Sample workbook preview using fictional service data.</p>
+</div>
+</section>
+<section class="section alt">
+<div class="wrap info-grid">
+<aside>
+<div class="eyebrow">How it works</div>
+<h2>Not a dashboard. A reusable workbook system.</h2>
+</aside>
+<div>
+<div class="grid-2">
+<article class="card">
+<h3>What problem it solves</h3>
+<p class="muted">Experienced technicians often carry practical knowledge that is hard to transfer consistently to newer team members.</p>
+</article>
+<article class="card">
+<h3>How the system works</h3>
+<p class="muted">Customer-reported issue, technician observations, likely causes, approved verification, escalation, final resolution, lessons learned, and training update.</p>
+</article>
+<article class="card">
+<h3>What is included</h3>
+<p class="muted">Start page, dashboard, discrepancy log, issue pathways, evidence prompts, escalation notes, and coaching focus areas.</p>
+</article>
+<article class="card">
+<h3>Practical business value</h3>
+<p class="muted">The workbook supports repeatable onboarding, better documentation, and more consistent capture of lessons from completed work.</p>
+</article>
+<article class="card">
+<h3>Clear project boundaries</h3>
+<p class="muted">This concept uses fictional service data and does not provide technical procedures or safety instructions.</p>
+</article>
+</div>
+<br>
+<details class="card details">
+<summary>Optional explanation: why document-based interaction?</summary>
+<p class="muted">This project stays close to the way teams already use checklists, logs, and training packets. The interaction is preview, expand, download, and use as a workbook.</p>
+</details>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Workflow steps</div>
+<h2>Simple learning loop.</h2>
+</div>
+<div class="grid-3">
+<article class="card">
+<span class="label">01</span>
+<h3>Capture the issue</h3>
+<p class="muted">Record the reported problem, field observations, and evidence.</p>
+</article>
+<article class="card">
+<span class="label">02</span>
+<h3>Connect the pattern</h3>
+<p class="muted">Link the issue to recurring discrepancy pathways and escalation rules.</p>
+</article>
+<article class="card">
+<span class="label">03</span>
+<h3>Turn work into training</h3>
+<p class="muted">Convert the final resolution into coaching notes and onboarding material.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section alt">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Explore Another Project</div>
+<h2>More Flowshua examples.</h2>
+</div>
+<div class="related">
+<a class="card" href="../aircraft-return-to-service/index.html">
+<span class="label">Project recovery system</span>
+<h3>Aircraft Return-to-Service Project</h3>
+<p class="muted">Structured project recovery and delivery control.</p>
+</a>
+<a class="card" href="../ops-hub/index.html">
+<span class="label">Operations system</span>
+<h3>Operations Hub</h3>
+<p class="muted">Day-to-day operations visibility and coordination.</p>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap foot">
+<img class="footer-logo" src="../assets/flowshua-logo.jpg" alt="Flowshua logo">
+<span>Clearer workflows. Stronger execution.</span>
+</div>
+</footer>
+<script src="../assets/site.js">
+</script>
 </body>
 </html>
