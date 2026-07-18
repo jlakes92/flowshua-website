@@ -10,3 +10,5 @@
 .hero .hero-banner-panel{background:var(--paper);border:1px solid rgba(245,124,32,.62);border-top:6px solid var(--orange);color:var(--charcoal)}.hero .hero-banner-panel .muted{color:var(--stone)}.hero .hero-banner-frame{background:var(--paper)}
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.contact-grid .contact-card{margin-top:0}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr}.hero .button.secondary{background:rgba(255,253,248,.08)}}
+
+@media(max-width:900px){.service-grid{grid-template-columns:1fr}}
