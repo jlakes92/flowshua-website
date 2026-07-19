@@ -20,25 +20,26 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/site.css">
-<style>body{background:var(--ivory)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{border-top:4px solid var(--orange);min-height:126px}.metric b{display:block;font-size:32px;margin-top:6px}.control{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:stretch}.tab-list,.phase-list{display:grid;gap:8px}.tab-list{align-content:start;background:var(--charcoal);border-radius:20px;padding:18px}.tab-list button{background:transparent;color:#efe6db;border-color:rgba(255,253,248,.2);text-align:left;padding:13px 14px}.tab-list button[aria-selected=true]{background:var(--mocha);border-color:rgba(255,253,248,.35)}#control-panel{border-top:6px solid var(--orange);min-height:100%}.phase-list{grid-template-columns:repeat(3,1fr)}.phase-list button{text-align:left;min-height:70px}.aircraft-doc-grid{grid-template-columns:repeat(3,1fr)}.aircraft-doc-grid .card{display:flex;flex-direction:column}.aircraft-doc-grid .button{margin-top:auto}.aircraft-download{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:22px;border-radius:20px;background:var(--charcoal);color:#fffdf8}.aircraft-download h3{margin:0}.aircraft-download .button{flex-shrink:0}@media(max-width:900px){.control{grid-template-columns:1fr}.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:repeat(2,1fr)}.aircraft-download{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:1fr}}</style>
+<style>body{background:var(--ivory)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{border-top:4px solid var(--orange);min-height:126px}.metric b{display:block;font-size:32px;margin-top:6px}.control{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:stretch}.tab-list,.phase-list{display:grid;gap:8px}.tab-list{align-content:start;background:var(--charcoal);border-radius:20px;padding:18px}.tab-list button{background:transparent;color:#efe6db;border-color:rgba(255,253,248,.2);text-align:left;padding:13px 14px}.tab-list button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.35)}#control-panel{border-top:6px solid var(--orange);min-height:100%}.phase-list{grid-template-columns:repeat(3,1fr)}.phase-list button{text-align:left;min-height:70px}.aircraft-doc-grid{grid-template-columns:repeat(3,1fr)}.aircraft-doc-grid .card{display:flex;flex-direction:column}.aircraft-doc-grid .button{margin-top:auto}.aircraft-download{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:22px;border-radius:20px;background:var(--charcoal);color:#fffdf8}.aircraft-download h3{margin:0}.aircraft-download .button{flex-shrink:0}@media(max-width:900px){.control{grid-template-columns:1fr}.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:repeat(2,1fr)}.aircraft-download{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:1fr}}</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
 <div class="wrap nav-inner">
 <a class="brand" href="../index.html#home">
 <img class="brand-logo" src="../assets/optimized/flowshua-logo-320.webp" alt="Flowshua logo" width="154" height="52" decoding="async">
 </a>
-<nav class="nav-links" id="site-links">
+<nav class="nav-links" id="site-links" aria-label="Main navigation">
 <a href="../index.html#approach">How It Helps</a>
 <a href="../index.html#portfolio">Portfolio</a>
 <a href="../index.html#about">About</a>
 <a href="../index.html#contact">Contact</a>
 </nav>
 <a class="nav-cta" href="../index.html#portfolio">Back to Portfolio</a>
-<button class="mobile-menu" data-mobile-menu aria-label="Open navigation">☰</button>
+<button class="mobile-menu" data-mobile-menu aria-label="Open navigation" aria-expanded="false" aria-controls="site-links">☰</button>
 </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="project-hero">
 <div class="wrap">
 <a class="button secondary" href="../index.html#portfolio">Back to Portfolio</a>
@@ -85,9 +86,9 @@
 </div>
 <br>
 <div class="control">
-<div class="tab-list" role="tablist" aria-label="Project control views">
+<div class="tab-list" role="group" aria-label="Project control views">
 </div>
-<article class="card" id="control-panel" tabindex="0">
+<article class="card" id="control-panel" role="region" aria-label="Selected project control view" aria-live="polite" aria-atomic="true">
 </article>
 </div>
 </div>
@@ -98,9 +99,9 @@
 <div class="eyebrow">Recovery phase controls</div>
 <h2>Phase-by-phase schedule and dependency view.</h2>
 </div>
-<div class="phase-list" role="tablist" aria-label="Project phase timeline">
+<div class="phase-list" role="group" aria-label="Project phase timeline">
 </div>
-<article class="card" id="phase-panel" style="margin-top:18px">
+<article class="card" id="phase-panel" role="region" aria-label="Selected project phase" aria-live="polite" aria-atomic="true" style="margin-top:18px">
 </article>
 </div>
 </section>
@@ -208,10 +209,10 @@
 <script>
 const views={"Project Overview":['Goal','Return one fictional aircraft to mission-capable status in 12 weeks while keeping work, parts, inspections, labor, risks, and closeout organized.','Main watch items: critical part delivery is uncertain; major work package B is behind plan; quality review time needs to be protected; final sign-off depends on linked release conditions.'],"Project Charter":['Charter','Defines the recovery goal, 12-week target, sponsor decisions, work boundaries, and closeout standard.','The charter keeps scope, release conditions, and final sign-off aligned.'],"Work Packages":['Work packages','Complete initial condition assessment; approve the project plan and return-to-service target; build the detailed work plan; confirm parts needed and sourcing plan; set recovery sequence and shop plan; finish major work package A; finish major work package B; restore support systems and records; install recovered components; run integration checks; complete quality review; run final readiness checks; build acceptance package; get final sign-off and capture lessons learned.','Each package has an owner, target week, status, and dependency note.'],"Master Schedule":['Schedule','The schedule moves through assessment, scope and parts confirmation, major work, integration, readiness checks, and closeout.','Current health is At Risk because package B and critical parts may affect integration.'],"Budget and Forecast":['Budget','Budget used is 42%. Forecast tracking separates planned labor, parts, support, and contingency.','Contingency is held until the critical part forecast is clearer.'],"Parts and Dependencies":['Parts and dependencies','Critical component arrival may affect integration timing; mechanical assembly delivery forecast is still uncertain; vendor diagnostic support is planned for Week 8; support equipment must be reserved before integration; quality evidence needs to be staged before review.','Dependencies are managed before they block final sign-off.'],"Quality Gates":['Quality gates','Scope baseline approved; critical parts plan confirmed; major work package A complete; major work package B complete; component integration verified; quality review complete; return-to-service sign-off complete.','One of seven quality gates is complete.'],"Risks and Decisions":['RAIDD','Risk: A critical part could miss the integration window. Risk: A new condition found during work could add scope. Risk: Quality review timing may not line up with recovery completion. Issue: Critical part delivery date is still uncertain. Issue: Major work package B is moving slower than planned. Decision: Use full return-to-service sign-off instead of partial release. Decision: Hold contingency until the critical part forecast is clearer. Dependency: Final sign-off depends on quality review, readiness checks, and sponsor approval.','The RAIDD log turns project noise into owned follow-up.'],"Lessons Learned":['Lessons learned','Capture planning assumptions, dependency misses, review timing, handoff gaps, and what improved recovery control.','Closeout produces a better recovery template for the next project.']};
 const phases=[['Assess and plan','Initial assessment and recovery planning.','Scope clarity, early risks, and owner alignment.','Condition assessment must be complete before the baseline is approved.','In Progress','Approve the recovery plan.'],['Confirm scope and parts','Scope and parts needs are confirmed against the recovery sequence.','Critical part forecast and sourcing risk.','Parts plan must support integration timing.','Watch','Confirm delivery path.'],['Execute major work','Major work packages A and B move through execution.','Package B is behind plan.','Shop sequence and support resources must stay aligned.','At Risk','Recover lost time where possible.'],['Integrate and inspect','Recovered components and support systems are integrated and checked.','Integration readiness and inspection evidence.','Critical component arrival affects timing.','Not Started','Reserve support equipment.'],['Run readiness checks','Final readiness checks prepare the acceptance package.','Quality review time and linked release conditions.','Quality evidence must be staged before review.','Not Started','Protect review window.'],['Final sign-off and closeout','Final sign-off, acceptance package, and lessons learned.','Sponsor approval and closeout completeness.','Sign-off depends on quality review and readiness checks.','Not Started','Prepare closeout package.']];
-function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>b.setAttribute('aria-selected',String(b.textContent===k)));let v=views[k];document.querySelector('#control-panel').innerHTML=`<span class="label">${k}</span>
+function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>b.setAttribute('aria-pressed',String(b.textContent===k)));let v=views[k];document.querySelector('#control-panel').innerHTML=`<span class="label">${k}</span>
 <h3>${v[0]}</h3>
 <p class="muted">${v[1]}</p>
-<p>${v[2]}</p>`}function paintPhase(i){document.querySelectorAll('.phase-list button').forEach((b,n)=>b.setAttribute('aria-selected',String(n===i)));let p=phases[i];document.querySelector('#phase-panel').innerHTML=`<span class="label">${p[0]}</span>
+<p>${v[2]}</p>`}function paintPhase(i){document.querySelectorAll('.phase-list button').forEach((b,n)=>b.setAttribute('aria-pressed',String(n===i)));let p=phases[i];document.querySelector('#phase-panel').innerHTML=`<span class="label">${p[0]}</span>
 <h3>${p[0]}</h3>
 <p>
 <b>What is happening:</b> ${p[1]}</p>
@@ -222,7 +223,7 @@ function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>b
 <p>
 <b>Current status:</b> ${p[4]}</p>
 <p>
-<b>Next step:</b> ${p[5]}</p>`}document.querySelector('.tab-list').innerHTML=Object.keys(views).map((v,i)=>`<button aria-selected="${i===0}" type="button">${v}</button>`).join('');document.querySelectorAll('.tab-list button').forEach(b=>b.onclick=()=>paintView(b.textContent));paintView('Project Overview');document.querySelector('.phase-list').innerHTML=phases.map((p,i)=>`<button aria-selected="${i===0}" type="button">${i+1}. ${p[0]}</button>`).join('');document.querySelectorAll('.phase-list button').forEach((b,i)=>b.onclick=()=>paintPhase(i));paintPhase(0);
+<b>Next step:</b> ${p[5]}</p>`}document.querySelector('.tab-list').innerHTML=Object.keys(views).map((v,i)=>`<button aria-pressed="${i===0}" aria-controls="control-panel" type="button">${v}</button>`).join('');document.querySelectorAll('.tab-list button').forEach(b=>b.onclick=()=>paintView(b.textContent));paintView('Project Overview');document.querySelector('.phase-list').innerHTML=phases.map((p,i)=>`<button aria-pressed="${i===0}" aria-controls="phase-panel" type="button">${i+1}. ${p[0]}</button>`).join('');document.querySelectorAll('.phase-list button').forEach((b,i)=>b.onclick=()=>paintPhase(i));paintPhase(0);
 </script>
 </body>
 </html>

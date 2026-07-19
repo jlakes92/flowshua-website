@@ -1,4 +1,8 @@
 const desktopNavigation=window.matchMedia('(min-width:901px)');
+document.querySelectorAll('.skip-link').forEach(link=>link.addEventListener('click',()=>{
+  const target=document.querySelector(link.getAttribute('href'));
+  if(target)target.focus();
+}));
 function setMobileNavigation(button,open,{restoreFocus=false}={}){
   const links=document.getElementById(button.getAttribute('aria-controls'));
   if(!links)return;
