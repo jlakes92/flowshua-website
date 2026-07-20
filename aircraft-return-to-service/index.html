@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/site.css">
-<style>body{background:var(--ivory)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{border-top:4px solid var(--orange);min-height:126px}.metric b{display:block;font-size:32px;margin-top:6px}.sample-note{margin:18px 0 0;padding:16px 18px;border-left:5px solid var(--orange);background:#fff7ed;border-radius:0 14px 14px 0}.control{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:stretch}.tab-list,.phase-list,.filter-list{display:grid;gap:8px}.tab-list{align-content:start;background:var(--charcoal);border-radius:20px;padding:18px}.tab-list button{background:transparent;color:#efe6db;border-color:rgba(255,253,248,.2);text-align:left;padding:13px 14px}.tab-list button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.35)}#control-panel{border-top:6px solid var(--orange);min-height:100%;overflow:auto}.data-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.94rem}.data-table th,.data-table td{padding:11px 10px;border-bottom:1px solid rgba(16,42,67,.14);text-align:left;vertical-align:top}.data-table th{color:var(--navy);background:#f2eee7}.data-table caption{text-align:left;font-weight:700;margin-bottom:8px}.phase-list{grid-template-columns:repeat(3,1fr)}.phase-list button{text-align:left;min-height:70px}.budget-layout,.quality-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.budget-bars{display:grid;gap:14px}.budget-row{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:12px;align-items:center}.bar-track{height:18px;border-radius:999px;background:#e5e7eb;overflow:hidden}.bar-plan,.bar-forecast{display:block;height:100%;border-radius:999px}.bar-plan{background:var(--navy)}.bar-forecast{background:var(--orange);margin-top:-18px;opacity:.72}.filter-list{grid-template-columns:repeat(4,max-content);margin-bottom:16px}.filter-list button[aria-pressed=true]{background:var(--navy);color:white}.gate-list,.lesson-list{display:grid;gap:12px}.gate,.lesson{padding:15px;border:1px solid rgba(16,42,67,.14);border-radius:14px;background:#fff}.gate-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.aircraft-doc-grid{grid-template-columns:repeat(3,1fr)}.aircraft-doc-grid .card{display:flex;flex-direction:column}.aircraft-doc-grid .button{margin-top:auto}.aircraft-download{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:22px;border-radius:20px;background:var(--charcoal);color:#fffdf8}.aircraft-download h3{margin:0}.aircraft-download .button{flex-shrink:0}@media(max-width:900px){.control,.budget-layout,.quality-layout{grid-template-columns:1fr}.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:repeat(2,1fr)}.aircraft-download{align-items:flex-start;flex-direction:column}}@media(max-width:650px){.data-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.data-table,.data-table tbody,.data-table tr,.data-table td{display:block;width:100%}.data-table tr{padding:10px 0;border-bottom:2px solid rgba(16,42,67,.18)}.data-table td{border:0;padding:5px 0}.data-table td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.04em}.filter-list{grid-template-columns:repeat(2,1fr)}.budget-row{grid-template-columns:1fr}.budget-row .bar-track{margin-bottom:4px}}@media(max-width:560px){.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:1fr}}</style>
+<style>body{background:var(--ivory)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{border-top:4px solid var(--orange);min-height:126px}.metric b{display:block;font-size:32px;margin-top:6px}.sample-note{margin:18px 0 0;padding:16px 18px;border-left:5px solid var(--orange);background:#fff7ed;border-radius:0 14px 14px 0}.control{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:stretch}.tab-list,.phase-list,.filter-list{display:grid;gap:8px}.tab-list{align-content:start;background:var(--charcoal);border-radius:20px;padding:18px}.tab-list button{background:transparent;color:#efe6db;border-color:rgba(255,253,248,.2);text-align:left;padding:13px 14px}.tab-list button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.35)}#control-panel{border-top:6px solid var(--orange);min-height:100%;overflow:auto}.data-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.94rem}.data-table th,.data-table td{padding:11px 10px;border-bottom:1px solid rgba(16,42,67,.14);text-align:left;vertical-align:top}.data-table th{color:var(--navy);background:#f2eee7}.data-table caption{text-align:left;font-weight:700;margin-bottom:8px}.phase-list{grid-template-columns:repeat(3,1fr)}.phase-list button{text-align:left;min-height:70px}.budget-layout,.quality-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.budget-bars{display:grid;gap:14px}.budget-row{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:12px;align-items:center}.bar-track{height:18px;border-radius:999px;background:#e5e7eb;overflow:hidden}.bar-plan,.bar-forecast{display:block;height:100%;border-radius:999px}.bar-plan{background:var(--navy)}.bar-forecast{background:var(--orange);margin-top:-18px;opacity:.72}.gate-list,.lesson-list{display:grid;gap:12px}.gate,.lesson{padding:15px;border:1px solid rgba(16,42,67,.14);border-radius:14px;background:#fff}.gate-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}@media(max-width:900px){.control,.budget-layout,.quality-layout{grid-template-columns:1fr}.metrics,.phase-list{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.data-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.data-table,.data-table tbody,.data-table tr,.data-table td{display:block;width:100%}.data-table tr{padding:10px 0;border-bottom:2px solid rgba(16,42,67,.18)}.data-table td{border:0;padding:5px 0}.data-table td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.04em}.budget-row{grid-template-columns:1fr}.budget-row .bar-track{margin-bottom:4px}}@media(max-width:560px){.metrics,.phase-list{grid-template-columns:1fr}}.raidd-app{display:grid;grid-template-columns:320px minmax(0,1fr);width:100%;min-height:640px;background:var(--paper);border-top:1px solid var(--taupe);border-bottom:1px solid var(--taupe)}.raidd-side{background:var(--charcoal);color:#fffaf4;padding:28px 24px;display:flex;flex-direction:column;gap:10px}.raidd-side strong{margin-bottom:8px;color:#fff}.raidd-side button{width:100%;background:transparent;color:#efe6db;border:1px solid rgba(230,221,210,.2);border-radius:12px;padding:14px 15px;text-align:left;font-size:14px;font-weight:850;cursor:pointer}.raidd-side button:hover,.raidd-side button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.5);box-shadow:inset 5px 0 0 var(--orange)}.raidd-workspace{min-width:0;padding:34px clamp(24px,3vw,58px) 44px}.raidd-workspace-head{max-width:900px}.raidd-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0 18px}.raidd-metric{background:var(--paper);border:1px solid var(--taupe);border-top:4px solid var(--orange);border-radius:16px;padding:16px;min-height:112px}.raidd-metric span{display:block;color:var(--stone);font-size:13px}.raidd-metric strong{display:block;color:var(--charcoal);font-size:30px;line-height:1.1;margin-top:8px}.raidd-table-wrap{overflow-x:auto;background:var(--paper);border:1px solid var(--taupe);border-radius:18px}.raidd-table-wrap .data-table{margin:0;min-width:920px}.raidd-table-wrap .data-table caption{padding:16px 16px 0}.raidd-table-wrap .data-table th:first-child,.raidd-table-wrap .data-table td:first-child{padding-left:16px}.raidd-table-wrap .data-table th:last-child,.raidd-table-wrap .data-table td:last-child{padding-right:16px}@media(max-width:1100px){.raidd-app{grid-template-columns:250px minmax(0,1fr)}.raidd-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.raidd-app{grid-template-columns:1fr;min-height:0}.raidd-side{padding:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.raidd-side strong{grid-column:1/-1}.raidd-workspace{padding:26px 20px 36px}}@media(max-width:650px){.raidd-table-wrap{overflow:visible;border:0;background:transparent}.raidd-table-wrap .data-table{min-width:0}.raidd-table-wrap .data-table caption{padding:0 0 10px}.raidd-table-wrap .data-table tr{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:14px;margin-bottom:12px}.raidd-table-wrap .data-table td,.raidd-table-wrap .data-table td:first-child,.raidd-table-wrap .data-table td:last-child{padding:5px 12px}}@media(max-width:560px){.raidd-side{grid-template-columns:1fr;padding:18px 16px}.raidd-side strong{grid-column:auto}.raidd-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.raidd-metric{min-height:100px;padding:14px}.raidd-metric strong{font-size:26px}.raidd-workspace{padding:24px 16px 32px}}.aircraft-app{display:grid;grid-template-columns:320px minmax(0,1fr);width:100%;min-height:760px;background:var(--ivory);border-top:1px solid var(--taupe);border-bottom:1px solid var(--taupe)}.aircraft-side{background:var(--charcoal);color:#fffaf4;padding:28px 24px;display:flex;flex-direction:column;gap:10px}.aircraft-side strong{margin-bottom:8px;color:#fff}.aircraft-side button{width:100%;background:transparent;color:#efe6db;border:1px solid rgba(230,221,210,.2);border-radius:12px;padding:14px 15px;text-align:left;font-size:14px;font-weight:850;cursor:pointer}.aircraft-side button:hover,.aircraft-side button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.5);box-shadow:inset 5px 0 0 var(--orange)}.aircraft-main{min-width:0;padding:34px clamp(24px,3vw,58px) 48px}.aircraft-app-head{max-width:940px;margin-bottom:24px}.aircraft-workspace{min-width:0}.workspace-section{margin-top:24px}.workspace-section-head{max-width:900px;margin-bottom:14px}.workspace-card{max-width:none}.app-table-wrap{overflow-x:auto;background:var(--paper);border:1px solid var(--taupe);border-radius:18px}.app-table-wrap .data-table{margin:0;min-width:980px}.app-table-wrap .data-table caption{padding:16px 16px 0}.app-table-wrap .data-table th,.app-table-wrap .data-table td{padding:9px 9px}.app-table-wrap .data-table th:first-child,.app-table-wrap .data-table td:first-child{padding-left:14px}.app-table-wrap .data-table th:last-child,.app-table-wrap .data-table td:last-child{padding-right:14px}.app-gate-list,.app-lesson-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.raidd-subnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}.raidd-subnav button{border:1px solid var(--taupe);background:var(--paper);border-radius:12px;padding:10px 13px;color:var(--mocha);font-weight:850;cursor:pointer}.raidd-subnav button[aria-pressed=true]{background:var(--charcoal);border-color:var(--charcoal);color:#fff}.aircraft-workspace .raidd-summary{margin-top:16px}@media(max-width:1100px){.aircraft-app{grid-template-columns:250px minmax(0,1fr)}.aircraft-main{padding:30px 24px 42px}.app-gate-list,.app-lesson-list{grid-template-columns:1fr}}@media(max-width:900px){.aircraft-app{grid-template-columns:1fr;min-height:0}.aircraft-side{padding:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.aircraft-side strong{grid-column:1/-1}.aircraft-main{padding:28px 20px 40px}.app-table-wrap{max-width:100%}}@media(max-width:650px){.app-table-wrap{overflow:visible;border:0;background:transparent}.app-table-wrap .data-table{min-width:0}.app-table-wrap .data-table caption{padding:0 0 10px}.app-table-wrap .data-table tr{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:12px;margin-bottom:10px}.app-table-wrap .data-table td,.app-table-wrap .data-table td:first-child,.app-table-wrap .data-table td:last-child{padding:4px 10px}.raidd-subnav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.raidd-subnav button{width:100%}}@media(max-width:560px){.aircraft-side{grid-template-columns:1fr;padding:18px 16px}.aircraft-side strong{grid-column:auto}.aircraft-main{padding:24px 16px 34px}.raidd-subnav{grid-template-columns:1fr}.app-gate-list,.app-lesson-list{gap:10px}}</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -51,151 +51,21 @@
 <div class="boundary">This is a fictional portfolio project built from general maintenance coordination experience. It does not contain real aircraft information, technical data, military procedures, operational details, or Government work product.</div>
 </div>
 </section>
-<section class="section">
-<div class="wrap">
-<div class="section-head">
+<div class="aircraft-app">
+<aside class="aircraft-side" role="group" aria-label="Aircraft project views">
+<strong>Aircraft project views</strong>
+</aside>
+<section class="aircraft-main" aria-labelledby="aircraft-view-title">
+<div class="aircraft-app-head">
 <div class="eyebrow">Interactive project-controls package</div>
-<h2>Recovery status and controls from assessment to closeout.</h2>
+<h2 id="aircraft-view-title">Project Overview</h2>
+<p class="muted" id="aircraft-view-subtitle">Leadership snapshot of the fictional project-control sample.</p>
+<p class="sample-note"><strong>Sample-data boundary:</strong> Every metric and record is fictional, illustrative, and unclassified. These views demonstrate project controls only; they are not maintenance instructions, technical authority, maintenance release, airworthiness approval, Government acceptance, or federal contract past performance.</p>
 </div>
-<div class="metrics">
-<article class="card metric">
-<span class="muted">Overall progress</span>
-<b>42%</b>
-</article>
-<article class="card metric">
-<span class="muted">Schedule health</span>
-<br>
-<span class="status risk">At Risk</span>
-</article>
-<article class="card metric">
-<span class="muted">Budget used</span>
-<b>42%</b>
-</article>
-<article class="card metric">
-<span class="muted">Open items</span>
-<b>8</b>
-</article>
-<article class="card metric">
-<span class="muted">Return date forecast</span>
-<b>Week 12</b>
-</article>
-<article class="card metric">
-<span class="muted">Quality gates complete</span>
-<b>1 of 7</b>
-</article>
-</div>
-<p class="sample-note"><strong>Sample-data boundary:</strong> Every metric below is fictional, illustrative, and unclassified. These views demonstrate project controls only; they are not maintenance instructions, technical authority, maintenance release, airworthiness approval, Government acceptance, or federal contract past performance.</p>
-<br>
-<div class="control">
-<div class="tab-list" role="tablist" aria-label="Project control views">
-</div>
-<article class="card" id="control-panel" role="tabpanel" aria-label="Selected project control view" tabindex="0">
-</article>
-</div>
-</div>
+<div class="aircraft-workspace" id="aircraft-workspace" role="region" aria-labelledby="aircraft-view-title"></div>
+<p class="sr-only" id="aircraft-view-announcement" aria-live="polite" aria-atomic="true"></p>
 </section>
-<section class="section alt">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Recovery phase controls</div>
-<h2>Phase-by-phase schedule and dependency view.</h2>
 </div>
-<div class="phase-list" role="group" aria-label="Project phase timeline">
-</div>
-<article class="card" id="phase-panel" role="region" aria-label="Selected project phase" aria-live="polite" aria-atomic="true" style="margin-top:18px">
-</article>
-</div>
-</section>
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Fictional sample budget</div>
-<h2>Budget and forecast by control category.</h2>
-<p class="muted">All amounts are made-up sample figures. The view compares the approved sample plan with the expected total cost; it does not represent a customer, contract, aircraft, or Government program.</p>
-</div>
-<div class="budget-layout">
-<article class="card">
-<h3>Forecast comparison</h3>
-<div class="budget-bars" id="budget-bars"></div>
-</article>
-<article class="card">
-<span class="label">Budget health</span>
-<h3>Watch</h3>
-<p><strong>$600,000</strong> fictional planned budget</p>
-<p><strong>$252,000</strong> spent or committed</p>
-<p><strong>$585,000</strong> expected total cost</p>
-<p><strong>$15,000</strong> budget remaining</p>
-<p class="muted">Forecast headroom equals the sample planned budget less the sample expected total cost.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="section alt">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Management attention</div>
-<h2>RAIDD ownership and follow-through.</h2>
-<p class="muted">Filter the fictional log by management-control type. Descriptions stay generic and contain no real aircraft, vendor, operational, inspection, or technical data.</p>
-</div>
-<div class="filter-list" role="group" aria-label="Filter RAIDD items by type"></div>
-<div id="raidd-results" aria-live="polite"></div>
-</div>
-</section>
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Readiness and reuse</div>
-<h2>Illustrative gates, lessons, and closeout.</h2>
-<p class="muted">These are project-management checkpoints only. They do not establish maintenance criteria or authorize an aircraft return to service.</p>
-</div>
-<div class="quality-layout">
-<article class="card"><h3>Project-control gates</h3><div class="gate-list" id="gate-list"></div></article>
-<article class="card"><h3>Lessons and closeout</h3><div class="lesson-list" id="lesson-list"></div></article>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Public package downloads</div>
-<h2>Sample project-control documents and workbook.</h2>
-<p class="muted">Sample project workbook using fictional aircraft recovery data. It is built to show project-control structure, not real aircraft maintenance data or procedures.</p>
-</div>
-<div class="doc-grid aircraft-doc-grid">
-<article class="card">
-<div class="doc-icon">PDF</div>
-<h3>Project Dashboard</h3>
-<p class="muted">A summary view of progress, schedule health, budget use, open items, and quality gates.</p>
-<a class="button secondary" target="_blank" rel="noopener" href="assets/aircraft-project-dashboard.pdf">View PDF</a>
-</article>
-<article class="card">
-<div class="doc-icon">PDF</div>
-<h3>Master Schedule</h3>
-<p class="muted">A simple recovery schedule showing phases, work packages, and timing risk.</p>
-<a class="button secondary" target="_blank" rel="noopener" href="assets/aircraft-master-schedule.pdf">View PDF</a>
-</article>
-<article class="card">
-<div class="doc-icon">PDF</div>
-<h3>Budget and Forecast</h3>
-<p class="muted">A fictional budget and forecast view for labor, parts, and contingency tracking.</p>
-<a class="button secondary" target="_blank" rel="noopener" href="assets/aircraft-budget-forecast.pdf">View PDF</a>
-</article>
-<article class="card">
-<div class="doc-icon">PDF</div>
-<h3>Risks, Issues, Decisions, and Dependencies</h3>
-<p class="muted">A RAIDD log for watching recovery risk and linked release conditions.</p>
-<a class="button secondary" target="_blank" rel="noopener" href="assets/aircraft-raidd-log.pdf">View PDF</a>
-</article>
-<article class="card">
-<div class="doc-icon">PDF</div>
-<h3>Project-Control Gates and Closeout</h3>
-<p class="muted">An illustrative gate and closeout view for staged project reviews.</p>
-<a class="button secondary" target="_blank" rel="noopener" href="assets/aircraft-quality-gates.pdf">View PDF</a>
-</article>
-</div>
-<div class="aircraft-download"><div><h3>Editable sample project workbook</h3><p>Fictional, illustrative, unclassified project-control sample. Not technical instructions, Government work product, maintenance release, airworthiness approval, technical authority, Government acceptance, or federal contract past performance.</p></div><a class="button bronze" target="_blank" rel="noopener" href="assets/Flowshua Aircraft Return-to-Service Project.xlsx">Download Sample Project Workbook</a></div>
-</div>
-</section>
 <section class="section">
 <div class="wrap info-grid">
 <aside>
@@ -289,7 +159,7 @@ const controlViews={
 'Work packages':()=>tableMarkup('Fifteen fictional work packages',['ID','Phase','Work','Owner role','Status','Complete','Depends on','Schedule effect'],workPackages),
 'Procurement':()=>tableMarkup('Generic fictional needs and dependencies',['Request','Need','Source type','Forecast','Criticality','Status'],procurement),
 'Quality controls':()=>`<span class="label">Seven illustrative gates</span><h3>Project readiness, not technical approval</h3><p>One gate is complete; two are at risk; one is in progress; three have not started. The gates organize scope, sourcing, work-package handoffs, integration coordination, project quality review, and fictional sponsor closeout.</p><p class="muted">No gate is a maintenance release, airworthiness determination, technical certification, Government acceptance, or authorization to operate an aircraft.</p>`,
-'Lessons learned':()=>`<span class="label">Closeout and reuse</span><h3>Five lessons carried into the next sample</h3><p>Baseline scope early, start generic long-lead planning early, protect constrained capacity, stage project evidence before reviews, and keep leadership reporting simple.</p><p>The closeout checklist covers the sample closeout package, budget wrap-up, RAIDD review, lessons review, and approved public-workbook archive.</p>`
+'Lessons learned':()=>`<span class="label">Closeout and reuse</span><h3>Five lessons carried into the next sample</h3><p>Baseline scope early, start generic long-lead planning early, protect constrained capacity, stage project evidence before reviews, and keep leadership reporting simple.</p><p>The closeout checklist covers the sample closeout package, budget wrap-up, RAIDD review, lessons review, and approved portfolio archive.</p>`
 };
 const phases=[['Assess and plan','Initial fictional assessment and project planning.','Scope clarity, early risks, and owner alignment.','The sample baseline follows the starting assessment.','In Progress','Approve the illustrative project plan.'],['Confirm scope and needs','Scope and generic needs are aligned with the project sequence.','Forecast confidence and sourcing risk.','The generic needs plan supports the sample integration window.','Watch','Confirm the fictional delivery path.'],['Execute major work','Major work packages A and B move through the sample plan.','Package B is behind the illustrative schedule.','Capacity and handoffs must stay aligned.','At Risk','Recover sample schedule time where possible.'],['Coordinate integration','Fictional recovered components and support records are coordinated.','Integration readiness and project evidence.','A generic critical need affects timing.','Not Started','Reserve generic support equipment.'],['Run readiness checks','Illustrative project checks prepare the sample closeout package.','Project review time and linked management conditions.','Project evidence must be staged before review.','Not Started','Protect the review window.'],['Project closeout','Illustrative project closeout package and lessons learned.','Fictional sponsor closure and record completeness.','Closeout depends on project review and readiness tracking.','Not Started','Prepare the sample closeout package.']];
 const budget=[['Labor and shop support',155000,150000],['Parts and repairable components',230000,228000],['Materials and supplies',48000,46500],['Outside support and vendor help',72000,71000],['Testing and quality',35000,33500],['Contingency',60000,56000]];
@@ -309,24 +179,39 @@ const gates=[['G-001','Approve project scope','Complete','The fictional goal and
 const lessons=[['Scope baseline','Set scope early and review changes before adding work.'],['Generic sourcing','Start critical planning early and maintain an alternate path.'],['Capacity','Protect the work that drives the sample date.'],['Project quality','Stage evidence and review time before work finishes.'],['Visibility','Use one simple dashboard for scope, cost, schedule, risk, and readiness.']];
 function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 function tableMarkup(caption,headers,rows){return `<table class="data-table"><caption>${escapeHtml(caption)}</caption><thead><tr>${headers.map(h=>`<th scope="col">${escapeHtml(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map((cell,i)=>`<td data-label="${escapeHtml(headers[i])}">${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`}
-function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>{const active=b.dataset.view===k;b.setAttribute('aria-selected',String(active));b.setAttribute('tabindex',active?'0':'-1')});document.querySelector('#control-panel').innerHTML=controlViews[k]()}function paintPhase(i){document.querySelectorAll('.phase-list button').forEach((b,n)=>b.setAttribute('aria-pressed',String(n===i)));let p=phases[i];document.querySelector('#phase-panel').innerHTML=`<span class="label">${p[0]}</span>
-<h3>${p[0]}</h3>
-<p>
-<b>What is happening:</b> ${p[1]}</p>
-<p>
-<b>What the team is watching:</b> ${p[2]}</p>
-<p>
-<b>Key dependency:</b> ${p[3]}</p>
-<p>
-<b>Current status:</b> ${p[4]}</p>
-<p>
-<b>Next step:</b> ${p[5]}</p>`}
-const tabs=Object.keys(controlViews);document.querySelector('.tab-list').innerHTML=tabs.map((v,i)=>`<button role="tab" aria-selected="${i===0}" tabindex="${i===0?'0':'-1'}" aria-controls="control-panel" data-view="${v}" type="button">${v}</button>`).join('');document.querySelectorAll('.tab-list button').forEach((b,i)=>{b.onclick=()=>paintView(b.dataset.view);b.onkeydown=e=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key))return;e.preventDefault();let n=e.key==='Home'?0:e.key==='End'?tabs.length-1:e.key==='ArrowDown'?(i+1)%tabs.length:(i-1+tabs.length)%tabs.length;let next=document.querySelectorAll('.tab-list button')[n];paintView(next.dataset.view);next.focus()}});paintView(tabs[0]);
-document.querySelector('.phase-list').innerHTML=phases.map((p,i)=>`<button aria-pressed="${i===0}" aria-controls="phase-panel" type="button">${i+1}. ${p[0]}</button>`).join('');document.querySelectorAll('.phase-list button').forEach((b,i)=>b.onclick=()=>paintPhase(i));paintPhase(0);
-document.querySelector('#budget-bars').innerHTML=budget.map(([name,plan,forecast])=>`<div class="budget-row"><span><strong>${escapeHtml(name)}</strong><br><small>$${plan.toLocaleString()} plan / $${forecast.toLocaleString()} forecast</small></span><span class="bar-track" aria-label="${escapeHtml(name)}: $${plan.toLocaleString()} planned and $${forecast.toLocaleString()} forecast"><span class="bar-plan" style="width:100%"></span><span class="bar-forecast" style="width:${Math.round(forecast/plan*100)}%"></span></span></div>`).join('');
-const types=['All','Risk','Assumption','Issue','Decision','Dependency'];function paintRaidd(type){document.querySelectorAll('.filter-list button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===type)));const rows=type==='All'?raidd:raidd.filter(r=>r[1]===type);document.querySelector('#raidd-results').innerHTML=tableMarkup(`${rows.length} ${type==='All'?'RAIDD':type.toLowerCase()} items`,['ID','Type','What needs attention','Owner role','Priority','Status','Next step'],rows)}document.querySelector('.filter-list').innerHTML=types.map((type,i)=>`<button type="button" data-type="${type}" aria-pressed="${i===0}">${type}</button>`).join('');document.querySelectorAll('.filter-list button').forEach(b=>b.onclick=()=>paintRaidd(b.dataset.type));paintRaidd('All');
-document.querySelector('#gate-list').innerHTML=gates.map(([id,name,status,ready])=>`<div class="gate"><div class="gate-head"><strong>${id}: ${escapeHtml(name)}</strong><span class="status ${status==='At Risk'?'risk':''}">${status}</span></div><p class="muted">Ready when: ${escapeHtml(ready)}</p></div>`).join('');
-document.querySelector('#lesson-list').innerHTML=lessons.map(([name,text])=>`<div class="lesson"><strong>${escapeHtml(name)}</strong><p class="muted">${escapeHtml(text)}</p></div>`).join('');
+const projectViews=[
+['overview','Project Overview','Leadership snapshot of the fictional project-control sample.'],
+['charter','Project Charter','Purpose, scope, governance, and explicit public boundaries.'],
+['work-packages','Work Packages','Fifteen fictional work packages with ownership, progress, and dependencies.'],
+['procurement','Procurement','Generic fictional needs, forecast timing, criticality, and status.'],
+['quality','Quality Controls','Illustrative project-control gates and readiness visibility.'],
+['raidd','RAIDD','Management attention across fictional risks, assumptions, issues, decisions, and dependencies.'],
+['lessons','Lessons Learned','Fictional lessons, closeout practices, and reusable project controls.']
+];
+const raiddViews=[
+['All','All RAIDD','All fictional risks, assumptions, issues, decisions, and dependencies requiring visibility or follow-through.'],
+['Risk','Risks','Fictional risks that could affect the illustrative project plan.'],
+['Assumption','Assumptions','Fictional planning assumptions that require continued validation.'],
+['Issue','Issues','Fictional issues requiring active ownership and follow-through.'],
+['Decision','Decisions','Fictional decisions recorded for project-control visibility.'],
+['Dependency','Dependencies','Fictional dependencies linking project-control activities and closeout.']
+];
+function projectMetricsMarkup(){return `<div class="metrics"><article class="card metric"><span class="muted">Overall progress</span><b>42%</b></article><article class="card metric"><span class="muted">Schedule health</span><br><span class="status risk">At Risk</span></article><article class="card metric"><span class="muted">Budget used</span><b>42%</b></article><article class="card metric"><span class="muted">Open items</span><b>8</b></article><article class="card metric"><span class="muted">Return date forecast</span><b>Week 12</b></article><article class="card metric"><span class="muted">Quality gates complete</span><b>1 of 7</b></article></div>`}
+function budgetMarkup(){return `<div class="budget-layout"><article class="card"><h3>Forecast comparison</h3><div class="budget-bars" id="budget-bars"></div></article><article class="card"><span class="label">Budget health</span><h3>Watch</h3><p><strong>$600,000</strong> fictional planned budget</p><p><strong>$252,000</strong> spent or committed</p><p><strong>$585,000</strong> expected total cost</p><p><strong>$15,000</strong> budget remaining</p><p class="muted">Forecast headroom equals the sample planned budget less the sample expected total cost.</p></article></div>`}
+function overviewMarkup(){return `${projectMetricsMarkup()}<div class="workspace-section"><article class="card workspace-card">${controlViews['Project overview']()}</article></div><div class="workspace-section"><div class="workspace-section-head"><span class="label">Recovery phase controls</span><h3>Phase-by-phase schedule and dependency view</h3></div><div class="phase-list" role="group" aria-label="Project phase timeline"></div><article class="card" id="phase-panel" role="region" aria-label="Selected project phase" aria-live="polite" aria-atomic="true" style="margin-top:14px"></article></div><div class="workspace-section"><div class="workspace-section-head"><span class="label">Fictional sample budget</span><h3>Budget and forecast by control category</h3><p class="muted">All amounts are made-up sample figures. The view does not represent a customer, contract, aircraft, or Government program.</p></div>${budgetMarkup()}</div>`}
+function qualityMarkup(){return `<article class="card workspace-card">${controlViews['Quality controls']()}</article><div class="workspace-section"><div class="workspace-section-head"><span class="label">Readiness and reuse</span><h3>Illustrative project-control gates</h3><p class="muted">These checkpoints do not establish maintenance criteria or authorize an aircraft return to service.</p></div><div class="app-gate-list" id="gate-list"></div></div>`}
+function lessonsMarkup(){return `<article class="card workspace-card">${controlViews['Lessons learned']()}</article><div class="workspace-section"><div class="workspace-section-head"><span class="label">Closeout and reuse</span><h3>Lessons carried into the next sample</h3></div><div class="app-lesson-list" id="lesson-list"></div></div>`}
+function raiddMarkup(){return `<div class="workspace-section-head"><span class="label">Fictional management-control data</span><h3 id="raidd-active-title">All RAIDD</h3><p class="muted" id="raidd-active-description">${raiddViews[0][2]}</p></div><div class="raidd-subnav" role="group" aria-label="RAIDD category views"></div><div class="raidd-summary" id="raidd-summary" aria-label="Selected RAIDD summary metrics"></div><div class="app-table-wrap" id="raidd-results"></div><p class="sr-only" id="raidd-announcement" aria-live="polite" aria-atomic="true"></p>`}
+function paintPhase(index){document.querySelectorAll('.phase-list button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));const phase=phases[index];document.querySelector('#phase-panel').innerHTML=`<span class="label">${phase[0]}</span><h3>${phase[0]}</h3><p><b>What is happening:</b> ${phase[1]}</p><p><b>What the team is watching:</b> ${phase[2]}</p><p><b>Key dependency:</b> ${phase[3]}</p><p><b>Current status:</b> ${phase[4]}</p><p><b>Next step:</b> ${phase[5]}</p>`}
+function hydrateOverview(){document.querySelector('.phase-list').innerHTML=phases.map((phase,i)=>`<button aria-pressed="${i===0}" aria-controls="phase-panel" type="button">${i+1}. ${phase[0]}</button>`).join('');document.querySelectorAll('.phase-list button').forEach((button,index)=>button.onclick=()=>paintPhase(index));paintPhase(0);document.querySelector('#budget-bars').innerHTML=budget.map(([name,plan,forecast])=>`<div class="budget-row"><span><strong>${escapeHtml(name)}</strong><br><small>$${plan.toLocaleString()} plan / $${forecast.toLocaleString()} forecast</small></span><span class="bar-track" aria-label="${escapeHtml(name)}: $${plan.toLocaleString()} planned and $${forecast.toLocaleString()} forecast"><span class="bar-plan" style="width:100%"></span><span class="bar-forecast" style="width:${Math.round(forecast/plan*100)}%"></span></span></div>`).join('')}
+function paintRaidd(type,label,description){document.querySelectorAll('.raidd-subnav button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.type===type)));const rows=type==='All'?raidd:raidd.filter(row=>row[1]===type);const urgent=rows.filter(row=>row[4]==='Critical'||row[4]==='High').length;const open=rows.filter(row=>row[5]==='Open'||row[5]==='At Risk').length;const approved=rows.filter(row=>row[5]==='Approved'||row[5]==='Closed').length;document.querySelector('#raidd-active-title').textContent=label;document.querySelector('#raidd-active-description').textContent=description;document.querySelector('#raidd-summary').innerHTML=[['Total items',rows.length],['Critical or high priority',urgent],['Open or at risk',open],['Approved or closed',approved]].map(([name,value])=>`<article class="raidd-metric"><span>${name}</span><strong>${value}</strong></article>`).join('');document.querySelector('#raidd-results').innerHTML=tableMarkup(`${rows.length} ${label} record${rows.length===1?'':'s'}`,['ID','Type','What needs attention','Owner role','Priority','Status','Next step'],rows);document.querySelector('#raidd-announcement').textContent=`${label} selected. Showing ${rows.length} record${rows.length===1?'':'s'}.`}
+function hydrateRaidd(){document.querySelector('.raidd-subnav').innerHTML=raiddViews.map((view,i)=>`<button type="button" data-type="${view[0]}" aria-pressed="${i===0}" aria-controls="raidd-results">${view[1]}</button>`).join('');document.querySelectorAll('.raidd-subnav button').forEach((button,index,buttons)=>{button.onclick=()=>paintRaidd(...raiddViews[index]);button.onkeydown=event=>{if(!['ArrowRight','ArrowLeft','ArrowDown','ArrowUp','Home','End'].includes(event.key))return;event.preventDefault();const forward=event.key==='ArrowRight'||event.key==='ArrowDown';const nextIndex=event.key==='Home'?0:event.key==='End'?buttons.length-1:forward?(index+1)%buttons.length:(index-1+buttons.length)%buttons.length;paintRaidd(...raiddViews[nextIndex]);buttons[nextIndex].focus()}});paintRaidd(...raiddViews[0])}
+function hydrateQuality(){document.querySelector('#gate-list').innerHTML=gates.map(([id,name,status,ready])=>`<div class="gate"><div class="gate-head"><strong>${id}: ${escapeHtml(name)}</strong><span class="status ${status==='At Risk'?'risk':''}">${status}</span></div><p class="muted">Ready when: ${escapeHtml(ready)}</p></div>`).join('')}
+function hydrateLessons(){document.querySelector('#lesson-list').innerHTML=lessons.map(([name,text])=>`<div class="lesson"><strong>${escapeHtml(name)}</strong><p class="muted">${escapeHtml(text)}</p></div>`).join('')}
+function renderProjectView(id,announce=true){const view=projectViews.find(item=>item[0]===id);document.querySelectorAll('.aircraft-side button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===id)));document.querySelector('#aircraft-view-title').textContent=view[1];document.querySelector('#aircraft-view-subtitle').textContent=view[2];const workspace=document.querySelector('#aircraft-workspace');if(id==='overview'){workspace.innerHTML=overviewMarkup();hydrateOverview()}else if(id==='charter'){workspace.innerHTML=`<article class="card workspace-card">${controlViews['Project charter']()}</article>`}else if(id==='work-packages'){workspace.innerHTML=`<div class="app-table-wrap">${tableMarkup('Fifteen fictional work packages',['ID','Phase','Work','Owner role','Status','Complete','Depends on','Schedule effect'],workPackages)}</div>`}else if(id==='procurement'){workspace.innerHTML=`<div class="app-table-wrap">${tableMarkup('Generic fictional needs and dependencies',['Request','Need','Source type','Forecast','Criticality','Status'],procurement)}</div>`}else if(id==='quality'){workspace.innerHTML=qualityMarkup();hydrateQuality()}else if(id==='raidd'){workspace.innerHTML=raiddMarkup();hydrateRaidd()}else if(id==='lessons'){workspace.innerHTML=lessonsMarkup();hydrateLessons()}if(announce)document.querySelector('#aircraft-view-announcement').textContent=`${view[1]} selected.`}
+document.querySelector('.aircraft-side').insertAdjacentHTML('beforeend',projectViews.map((view,i)=>`<button type="button" data-view="${view[0]}" aria-pressed="${i===0}" aria-controls="aircraft-workspace">${view[1]}</button>`).join(''));
+document.querySelectorAll('.aircraft-side button').forEach((button,index,buttons)=>{button.onclick=()=>renderProjectView(projectViews[index][0]);button.onkeydown=event=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;event.preventDefault();const nextIndex=event.key==='Home'?0:event.key==='End'?buttons.length-1:event.key==='ArrowDown'?(index+1)%buttons.length:(index-1+buttons.length)%buttons.length;renderProjectView(projectViews[nextIndex][0]);buttons[nextIndex].focus()}});
+renderProjectView('overview',false);
 </script>
 </body>
 </html>
