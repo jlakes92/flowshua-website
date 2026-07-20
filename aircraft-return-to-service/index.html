@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/site.css">
-<style>body{background:var(--ivory)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{border-top:4px solid var(--orange);min-height:126px}.metric b{display:block;font-size:32px;margin-top:6px}.control{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:stretch}.tab-list,.phase-list{display:grid;gap:8px}.tab-list{align-content:start;background:var(--charcoal);border-radius:20px;padding:18px}.tab-list button{background:transparent;color:#efe6db;border-color:rgba(255,253,248,.2);text-align:left;padding:13px 14px}.tab-list button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.35)}#control-panel{border-top:6px solid var(--orange);min-height:100%}.phase-list{grid-template-columns:repeat(3,1fr)}.phase-list button{text-align:left;min-height:70px}.aircraft-doc-grid{grid-template-columns:repeat(3,1fr)}.aircraft-doc-grid .card{display:flex;flex-direction:column}.aircraft-doc-grid .button{margin-top:auto}.aircraft-download{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:22px;border-radius:20px;background:var(--charcoal);color:#fffdf8}.aircraft-download h3{margin:0}.aircraft-download .button{flex-shrink:0}@media(max-width:900px){.control{grid-template-columns:1fr}.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:repeat(2,1fr)}.aircraft-download{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:1fr}}</style>
+<style>body{background:var(--ivory)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{border-top:4px solid var(--orange);min-height:126px}.metric b{display:block;font-size:32px;margin-top:6px}.sample-note{margin:18px 0 0;padding:16px 18px;border-left:5px solid var(--orange);background:#fff7ed;border-radius:0 14px 14px 0}.control{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:stretch}.tab-list,.phase-list,.filter-list{display:grid;gap:8px}.tab-list{align-content:start;background:var(--charcoal);border-radius:20px;padding:18px}.tab-list button{background:transparent;color:#efe6db;border-color:rgba(255,253,248,.2);text-align:left;padding:13px 14px}.tab-list button[aria-pressed=true]{background:var(--mocha);border-color:rgba(255,253,248,.35)}#control-panel{border-top:6px solid var(--orange);min-height:100%;overflow:auto}.data-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.94rem}.data-table th,.data-table td{padding:11px 10px;border-bottom:1px solid rgba(16,42,67,.14);text-align:left;vertical-align:top}.data-table th{color:var(--navy);background:#f2eee7}.data-table caption{text-align:left;font-weight:700;margin-bottom:8px}.phase-list{grid-template-columns:repeat(3,1fr)}.phase-list button{text-align:left;min-height:70px}.budget-layout,.quality-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.budget-bars{display:grid;gap:14px}.budget-row{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:12px;align-items:center}.bar-track{height:18px;border-radius:999px;background:#e5e7eb;overflow:hidden}.bar-plan,.bar-forecast{display:block;height:100%;border-radius:999px}.bar-plan{background:var(--navy)}.bar-forecast{background:var(--orange);margin-top:-18px;opacity:.72}.filter-list{grid-template-columns:repeat(4,max-content);margin-bottom:16px}.filter-list button[aria-pressed=true]{background:var(--navy);color:white}.gate-list,.lesson-list{display:grid;gap:12px}.gate,.lesson{padding:15px;border:1px solid rgba(16,42,67,.14);border-radius:14px;background:#fff}.gate-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.aircraft-doc-grid{grid-template-columns:repeat(3,1fr)}.aircraft-doc-grid .card{display:flex;flex-direction:column}.aircraft-doc-grid .button{margin-top:auto}.aircraft-download{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:22px;border-radius:20px;background:var(--charcoal);color:#fffdf8}.aircraft-download h3{margin:0}.aircraft-download .button{flex-shrink:0}@media(max-width:900px){.control,.budget-layout,.quality-layout{grid-template-columns:1fr}.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:repeat(2,1fr)}.aircraft-download{align-items:flex-start;flex-direction:column}}@media(max-width:650px){.data-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.data-table,.data-table tbody,.data-table tr,.data-table td{display:block;width:100%}.data-table tr{padding:10px 0;border-bottom:2px solid rgba(16,42,67,.18)}.data-table td{border:0;padding:5px 0}.data-table td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.04em}.filter-list{grid-template-columns:repeat(2,1fr)}.budget-row{grid-template-columns:1fr}.budget-row .bar-track{margin-bottom:4px}}@media(max-width:560px){.metrics,.phase-list,.aircraft-doc-grid{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -47,7 +47,7 @@
 </p>
 <span class="label">Aviation Work Sample</span>
 <h1>Aircraft Return-to-Service Project Controls Package</h1>
-<p class="lead">A fictional 12-week aircraft recovery project that shows how scope, work packages, parts, dependencies, quality gates, budget, risk, and final sign-off can be managed in one clear project-control system.</p>
+<p class="lead">A fictional 12-week aircraft recovery sample that shows how scope, work packages, generic needs, dependencies, project-control gates, budget, risk, and closeout can be managed in one clear system.</p>
 <div class="boundary">This is a fictional portfolio project built from general maintenance coordination experience. It does not contain real aircraft information, technical data, military procedures, operational details, or Government work product.</div>
 </div>
 </section>
@@ -84,11 +84,12 @@
 <b>1 of 7</b>
 </article>
 </div>
+<p class="sample-note"><strong>Sample-data boundary:</strong> Every metric below is fictional, illustrative, and unclassified. These views demonstrate project controls only; they are not maintenance instructions, technical authority, maintenance release, airworthiness approval, Government acceptance, or federal contract past performance.</p>
 <br>
 <div class="control">
-<div class="tab-list" role="group" aria-label="Project control views">
+<div class="tab-list" role="tablist" aria-label="Project control views">
 </div>
-<article class="card" id="control-panel" role="region" aria-label="Selected project control view" aria-live="polite" aria-atomic="true">
+<article class="card" id="control-panel" role="tabpanel" aria-label="Selected project control view" tabindex="0">
 </article>
 </div>
 </div>
@@ -103,6 +104,54 @@
 </div>
 <article class="card" id="phase-panel" role="region" aria-label="Selected project phase" aria-live="polite" aria-atomic="true" style="margin-top:18px">
 </article>
+</div>
+</section>
+<section class="section">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Fictional sample budget</div>
+<h2>Budget and forecast by control category.</h2>
+<p class="muted">All amounts are made-up sample figures. The view compares the approved sample plan with the expected total cost; it does not represent a customer, contract, aircraft, or Government program.</p>
+</div>
+<div class="budget-layout">
+<article class="card">
+<h3>Forecast comparison</h3>
+<div class="budget-bars" id="budget-bars"></div>
+</article>
+<article class="card">
+<span class="label">Budget health</span>
+<h3>Watch</h3>
+<p><strong>$600,000</strong> fictional planned budget</p>
+<p><strong>$252,000</strong> spent or committed</p>
+<p><strong>$585,000</strong> expected total cost</p>
+<p><strong>$15,000</strong> budget remaining</p>
+<p class="muted">Forecast headroom equals the sample planned budget less the sample expected total cost.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section alt">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Management attention</div>
+<h2>RAIDD ownership and follow-through.</h2>
+<p class="muted">Filter the fictional log by management-control type. Descriptions stay generic and contain no real aircraft, vendor, operational, inspection, or technical data.</p>
+</div>
+<div class="filter-list" role="group" aria-label="Filter RAIDD items by type"></div>
+<div id="raidd-results" aria-live="polite"></div>
+</div>
+</section>
+<section class="section">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Readiness and reuse</div>
+<h2>Illustrative gates, lessons, and closeout.</h2>
+<p class="muted">These are project-management checkpoints only. They do not establish maintenance criteria or authorize an aircraft return to service.</p>
+</div>
+<div class="quality-layout">
+<article class="card"><h3>Project-control gates</h3><div class="gate-list" id="gate-list"></div></article>
+<article class="card"><h3>Lessons and closeout</h3><div class="lesson-list" id="lesson-list"></div></article>
+</div>
 </div>
 </section>
 <section class="section">
@@ -139,12 +188,12 @@
 </article>
 <article class="card">
 <div class="doc-icon">PDF</div>
-<h3>Quality Gates and Sign-Off</h3>
-<p class="muted">A quality gate and closeout view for staged readiness checks.</p>
+<h3>Project-Control Gates and Closeout</h3>
+<p class="muted">An illustrative gate and closeout view for staged project reviews.</p>
 <a class="button secondary" target="_blank" rel="noopener" href="assets/aircraft-quality-gates.pdf">View PDF</a>
 </article>
 </div>
-<div class="aircraft-download"><h3>Editable sample project workbook</h3><a class="button bronze" target="_blank" rel="noopener" href="assets/Flowshua Aircraft Return-to-Service Project.xlsx">Download Sample Project Workbook</a></div>
+<div class="aircraft-download"><div><h3>Editable sample project workbook</h3><p>Fictional, illustrative, unclassified project-control sample. Not technical instructions, Government work product, maintenance release, airworthiness approval, technical authority, Government acceptance, or federal contract past performance.</p></div><a class="button bronze" target="_blank" rel="noopener" href="assets/Flowshua Aircraft Return-to-Service Project.xlsx">Download Sample Project Workbook</a></div>
 </div>
 </section>
 <section class="section">
@@ -168,7 +217,7 @@
 </article>
 <article class="card">
 <h3>Practical business value</h3>
-<p class="muted">Leaders can see what is behind plan, what needs a decision, and what must be protected before final sign-off.</p>
+<p class="muted">Leaders can see what is behind plan, what needs a decision, and what must be protected before sample closeout.</p>
 </article>
 <article class="card">
 <h3>Clear project boundaries</h3>
@@ -207,12 +256,60 @@
 <script src="../assets/site.js">
 </script>
 <script>
-const views={"Project Overview":['Goal','Return one fictional aircraft to mission-capable status in 12 weeks while keeping work, parts, inspections, labor, risks, and closeout organized.','Main watch items: critical part delivery is uncertain; major work package B is behind plan; quality review time needs to be protected; final sign-off depends on linked release conditions.'],"Project Charter":['Charter','Defines the recovery goal, 12-week target, sponsor decisions, work boundaries, and closeout standard.','The charter keeps scope, release conditions, and final sign-off aligned.'],"Work Packages":['Work packages','Complete initial condition assessment; approve the project plan and return-to-service target; build the detailed work plan; confirm parts needed and sourcing plan; set recovery sequence and shop plan; finish major work package A; finish major work package B; restore support systems and records; install recovered components; run integration checks; complete quality review; run final readiness checks; build acceptance package; get final sign-off and capture lessons learned.','Each package has an owner, target week, status, and dependency note.'],"Master Schedule":['Schedule','The schedule moves through assessment, scope and parts confirmation, major work, integration, readiness checks, and closeout.','Current health is At Risk because package B and critical parts may affect integration.'],"Budget and Forecast":['Budget','Budget used is 42%. Forecast tracking separates planned labor, parts, support, and contingency.','Contingency is held until the critical part forecast is clearer.'],"Parts and Dependencies":['Parts and dependencies','Critical component arrival may affect integration timing; mechanical assembly delivery forecast is still uncertain; vendor diagnostic support is planned for Week 8; support equipment must be reserved before integration; quality evidence needs to be staged before review.','Dependencies are managed before they block final sign-off.'],"Quality Gates":['Quality gates','Scope baseline approved; critical parts plan confirmed; major work package A complete; major work package B complete; component integration verified; quality review complete; return-to-service sign-off complete.','One of seven quality gates is complete.'],"Risks and Decisions":['RAIDD','Risk: A critical part could miss the integration window. Risk: A new condition found during work could add scope. Risk: Quality review timing may not line up with recovery completion. Issue: Critical part delivery date is still uncertain. Issue: Major work package B is moving slower than planned. Decision: Use full return-to-service sign-off instead of partial release. Decision: Hold contingency until the critical part forecast is clearer. Dependency: Final sign-off depends on quality review, readiness checks, and sponsor approval.','The RAIDD log turns project noise into owned follow-up.'],"Lessons Learned":['Lessons learned','Capture planning assumptions, dependency misses, review timing, handoff gaps, and what improved recovery control.','Closeout produces a better recovery template for the next project.']};
-const phases=[['Assess and plan','Initial assessment and recovery planning.','Scope clarity, early risks, and owner alignment.','Condition assessment must be complete before the baseline is approved.','In Progress','Approve the recovery plan.'],['Confirm scope and parts','Scope and parts needs are confirmed against the recovery sequence.','Critical part forecast and sourcing risk.','Parts plan must support integration timing.','Watch','Confirm delivery path.'],['Execute major work','Major work packages A and B move through execution.','Package B is behind plan.','Shop sequence and support resources must stay aligned.','At Risk','Recover lost time where possible.'],['Integrate and inspect','Recovered components and support systems are integrated and checked.','Integration readiness and inspection evidence.','Critical component arrival affects timing.','Not Started','Reserve support equipment.'],['Run readiness checks','Final readiness checks prepare the acceptance package.','Quality review time and linked release conditions.','Quality evidence must be staged before review.','Not Started','Protect review window.'],['Final sign-off and closeout','Final sign-off, acceptance package, and lessons learned.','Sponsor approval and closeout completeness.','Sign-off depends on quality review and readiness checks.','Not Started','Prepare closeout package.']];
-function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>b.setAttribute('aria-pressed',String(b.textContent===k)));let v=views[k];document.querySelector('#control-panel').innerHTML=`<span class="label">${k}</span>
-<h3>${v[0]}</h3>
-<p class="muted">${v[1]}</p>
-<p>${v[2]}</p>`}function paintPhase(i){document.querySelectorAll('.phase-list button').forEach((b,n)=>b.setAttribute('aria-pressed',String(n===i)));let p=phases[i];document.querySelector('#phase-panel').innerHTML=`<span class="label">${p[0]}</span>
+const workPackages=[
+['WP-001','Initiation','Document fictional starting condition','Technical Lead','Complete','100%','Project kickoff','Low'],
+['WP-002','Initiation','Approve the illustrative project plan','Operations Sponsor','Complete','100%','WP-001','Low'],
+['WP-003','Planning','Build the detailed work plan','Project Manager','Complete','100%','WP-001','Low'],
+['WP-004','Planning','Confirm generic needs and sourcing plan','Procurement Lead','At Risk','85%','WP-003','Medium'],
+['WP-005','Planning','Set the recovery sequence and capacity plan','Work Center Lead','Complete','100%','WP-003','Low'],
+['WP-006','Execution','Finish major work package A','Work Center Lead','In Progress','60%','WP-005','Medium'],
+['WP-007','Execution','Finish major work package B','Technical Lead','At Risk','35%','WP-004','High'],
+['WP-008','Execution','Restore support systems and records','Work Center Lead','In Progress','10%','WP-006','Medium'],
+['WP-009','Integration','Install fictional recovered components','Technical Lead','Not Started','0%','WP-007','High'],
+['WP-010','Integration','Run illustrative integration checks','Technical Lead','Not Started','0%','WP-009','High'],
+['WP-011','Quality','Complete project quality review','Quality Lead','Not Started','0%','WP-008','High'],
+['WP-012','Quality','Close project quality actions','Work Center Lead','Not Started','0%','WP-011','Medium'],
+['WP-013','Readiness','Run illustrative readiness checks','Quality Lead','Not Started','0%','WP-012','High'],
+['WP-014','Readiness','Build the sample closeout package','Project Manager','Not Started','0%','WP-013','High'],
+['WP-015','Closeout','Close the illustrative project and capture lessons','Operations Sponsor','Not Started','0%','WP-014','High']
+];
+const procurement=[
+['PR-001','Inspection supplies','Internal stock','Available now','Low','Available'],
+['PR-002','Generic electrical component','Approved supplier','Week 3','High','In Review'],
+['PR-003','Generic mechanical assembly','Approved supplier','Waiting on forecast','Critical','At Risk'],
+['PR-004','Generic materials kit','Internal stock','Week 2','Medium','Available'],
+['PR-005','Support-equipment fixture','Shared pool','Week 4','Medium','Confirmed'],
+['PR-006','Generic diagnostic support','Service partner','Week 8','High','In Review'],
+['PR-007','Verification materials','Internal stock','Week 8','Low','Available'],
+['PR-008','Closeout paperwork','Project controls','Week 11','Medium','Not Started']
+];
+const controlViews={
+'Project overview':()=>`<span class="label">Leadership snapshot</span><h3>One connected project-control system</h3><p>The fictional sample links scope, weighted progress, a 12-week schedule, budget, generic sourcing dependencies, illustrative quality gates, RAIDD ownership, and closeout.</p><p><strong>Current attention:</strong> a generic critical need remains uncertain, work package B is behind its sample plan, and the review window must stay protected.</p><p class="muted">This is management-control content only. It contains no maintenance procedure, inspection criterion, aircraft configuration, operational detail, or approval authority.</p>`,
+'Project charter':()=>`<span class="label">Scope and governance</span><h3>Fictional charter</h3><p><strong>Goal:</strong> demonstrate how a fictional 12-week recovery target can be coordinated without presenting technical aircraft data.</p><p><strong>Main constraint:</strong> generic availability and the timing of project reviews drive the illustrative schedule.</p><p><strong>Success:</strong> the sample closes by Week 12, remains within its fictional budget, and completes all project-control gates.</p><p><strong>Boundary:</strong> no real aircraft, unit, system, vendor, contract, supply-chain, maintenance, inspection, or mission information is included.</p>`,
+'Work packages':()=>tableMarkup('Fifteen fictional work packages',['ID','Phase','Work','Owner role','Status','Complete','Depends on','Schedule effect'],workPackages),
+'Procurement':()=>tableMarkup('Generic fictional needs and dependencies',['Request','Need','Source type','Forecast','Criticality','Status'],procurement),
+'Quality controls':()=>`<span class="label">Seven illustrative gates</span><h3>Project readiness, not technical approval</h3><p>One gate is complete; two are at risk; one is in progress; three have not started. The gates organize scope, sourcing, work-package handoffs, integration coordination, project quality review, and fictional sponsor closeout.</p><p class="muted">No gate is a maintenance release, airworthiness determination, technical certification, Government acceptance, or authorization to operate an aircraft.</p>`,
+'Lessons learned':()=>`<span class="label">Closeout and reuse</span><h3>Five lessons carried into the next sample</h3><p>Baseline scope early, start generic long-lead planning early, protect constrained capacity, stage project evidence before reviews, and keep leadership reporting simple.</p><p>The closeout checklist covers the sample closeout package, budget wrap-up, RAIDD review, lessons review, and approved public-workbook archive.</p>`
+};
+const phases=[['Assess and plan','Initial fictional assessment and project planning.','Scope clarity, early risks, and owner alignment.','The sample baseline follows the starting assessment.','In Progress','Approve the illustrative project plan.'],['Confirm scope and needs','Scope and generic needs are aligned with the project sequence.','Forecast confidence and sourcing risk.','The generic needs plan supports the sample integration window.','Watch','Confirm the fictional delivery path.'],['Execute major work','Major work packages A and B move through the sample plan.','Package B is behind the illustrative schedule.','Capacity and handoffs must stay aligned.','At Risk','Recover sample schedule time where possible.'],['Coordinate integration','Fictional recovered components and support records are coordinated.','Integration readiness and project evidence.','A generic critical need affects timing.','Not Started','Reserve generic support equipment.'],['Run readiness checks','Illustrative project checks prepare the sample closeout package.','Project review time and linked management conditions.','Project evidence must be staged before review.','Not Started','Protect the review window.'],['Project closeout','Illustrative project closeout package and lessons learned.','Fictional sponsor closure and record completeness.','Closeout depends on project review and readiness tracking.','Not Started','Prepare the sample closeout package.']];
+const budget=[['Labor and shop support',155000,150000],['Parts and repairable components',230000,228000],['Materials and supplies',48000,46500],['Outside support and vendor help',72000,71000],['Testing and quality',35000,33500],['Contingency',60000,56000]];
+const raidd=[
+['R-01','Risk','A generic critical need could miss the integration window','Procurement Lead','Critical','Open','Confirm the alternate source and update delivery confidence'],
+['R-02','Risk','A newly observed fictional condition could add scope','Technical Lead','High','Open','Review scope before any extra work is approved'],
+['R-03','Risk','Project review timing may not align with sample completion','Quality Lead','High','Open','Hold the review window and stage project evidence early'],
+['A-01','Assumption','The fictional budget has enough contingency for small changes','Project Manager','Medium','Open','Review contingency use in the weekly cost check'],
+['A-02','Assumption','The sample team has capacity for the main work windows','Work Center Lead','High','Open','Confirm capacity before each schedule lock'],
+['I-01','Issue','A generic delivery forecast remains uncertain','Procurement Lead','Critical','At Risk','Escalate sourcing options and obtain a firmer forecast'],
+['I-02','Issue','Work package B is moving slower than the fictional plan','Technical Lead','High','Open','Shift sample capacity and protect completion checks'],
+['D-01','Decision','Use one complete illustrative closeout gate','Operations Sponsor','High','Approved','Keep all project-control checks before sample closeout'],
+['D-02','Decision','Hold contingency until the generic forecast is clearer','Project Manager','High','Approved','Use reserve only through a sample change review'],
+['D-03','Dependency','Sample closeout depends on project review, readiness tracking, and sponsor closure','Quality Lead','Critical','Open','Track the three items as one linked project-control gate']
+];
+const gates=[['G-001','Approve project scope','Complete','The fictional goal and work list are approved'],['G-002','Confirm generic sourcing plan','At Risk','Critical needs have a credible sample forecast'],['G-003','Finish work package A','In Progress','The package and management handoff are documented'],['G-004','Finish work package B','At Risk','The fictional work finishes inside the sample window'],['G-005','Verify integration coordination','Not Started','The sample coordination state is ready for project review'],['G-006','Finish project quality review','Not Started','No open management action blocks sample closeout'],['G-007','Complete illustrative project-control closeout','Not Started','The fictional sponsor closes the project-control record']];
+const lessons=[['Scope baseline','Set scope early and review changes before adding work.'],['Generic sourcing','Start critical planning early and maintain an alternate path.'],['Capacity','Protect the work that drives the sample date.'],['Project quality','Stage evidence and review time before work finishes.'],['Visibility','Use one simple dashboard for scope, cost, schedule, risk, and readiness.']];
+function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function tableMarkup(caption,headers,rows){return `<table class="data-table"><caption>${escapeHtml(caption)}</caption><thead><tr>${headers.map(h=>`<th scope="col">${escapeHtml(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map((cell,i)=>`<td data-label="${escapeHtml(headers[i])}">${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`}
+function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>{const active=b.dataset.view===k;b.setAttribute('aria-selected',String(active));b.setAttribute('tabindex',active?'0':'-1')});document.querySelector('#control-panel').innerHTML=controlViews[k]()}function paintPhase(i){document.querySelectorAll('.phase-list button').forEach((b,n)=>b.setAttribute('aria-pressed',String(n===i)));let p=phases[i];document.querySelector('#phase-panel').innerHTML=`<span class="label">${p[0]}</span>
 <h3>${p[0]}</h3>
 <p>
 <b>What is happening:</b> ${p[1]}</p>
@@ -223,7 +320,13 @@ function paintView(k){document.querySelectorAll('.tab-list button').forEach(b=>b
 <p>
 <b>Current status:</b> ${p[4]}</p>
 <p>
-<b>Next step:</b> ${p[5]}</p>`}document.querySelector('.tab-list').innerHTML=Object.keys(views).map((v,i)=>`<button aria-pressed="${i===0}" aria-controls="control-panel" type="button">${v}</button>`).join('');document.querySelectorAll('.tab-list button').forEach(b=>b.onclick=()=>paintView(b.textContent));paintView('Project Overview');document.querySelector('.phase-list').innerHTML=phases.map((p,i)=>`<button aria-pressed="${i===0}" aria-controls="phase-panel" type="button">${i+1}. ${p[0]}</button>`).join('');document.querySelectorAll('.phase-list button').forEach((b,i)=>b.onclick=()=>paintPhase(i));paintPhase(0);
+<b>Next step:</b> ${p[5]}</p>`}
+const tabs=Object.keys(controlViews);document.querySelector('.tab-list').innerHTML=tabs.map((v,i)=>`<button role="tab" aria-selected="${i===0}" tabindex="${i===0?'0':'-1'}" aria-controls="control-panel" data-view="${v}" type="button">${v}</button>`).join('');document.querySelectorAll('.tab-list button').forEach((b,i)=>{b.onclick=()=>paintView(b.dataset.view);b.onkeydown=e=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key))return;e.preventDefault();let n=e.key==='Home'?0:e.key==='End'?tabs.length-1:e.key==='ArrowDown'?(i+1)%tabs.length:(i-1+tabs.length)%tabs.length;let next=document.querySelectorAll('.tab-list button')[n];paintView(next.dataset.view);next.focus()}});paintView(tabs[0]);
+document.querySelector('.phase-list').innerHTML=phases.map((p,i)=>`<button aria-pressed="${i===0}" aria-controls="phase-panel" type="button">${i+1}. ${p[0]}</button>`).join('');document.querySelectorAll('.phase-list button').forEach((b,i)=>b.onclick=()=>paintPhase(i));paintPhase(0);
+document.querySelector('#budget-bars').innerHTML=budget.map(([name,plan,forecast])=>`<div class="budget-row"><span><strong>${escapeHtml(name)}</strong><br><small>$${plan.toLocaleString()} plan / $${forecast.toLocaleString()} forecast</small></span><span class="bar-track" aria-label="${escapeHtml(name)}: $${plan.toLocaleString()} planned and $${forecast.toLocaleString()} forecast"><span class="bar-plan" style="width:100%"></span><span class="bar-forecast" style="width:${Math.round(forecast/plan*100)}%"></span></span></div>`).join('');
+const types=['All','Risk','Assumption','Issue','Decision','Dependency'];function paintRaidd(type){document.querySelectorAll('.filter-list button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===type)));const rows=type==='All'?raidd:raidd.filter(r=>r[1]===type);document.querySelector('#raidd-results').innerHTML=tableMarkup(`${rows.length} ${type==='All'?'RAIDD':type.toLowerCase()} items`,['ID','Type','What needs attention','Owner role','Priority','Status','Next step'],rows)}document.querySelector('.filter-list').innerHTML=types.map((type,i)=>`<button type="button" data-type="${type}" aria-pressed="${i===0}">${type}</button>`).join('');document.querySelectorAll('.filter-list button').forEach(b=>b.onclick=()=>paintRaidd(b.dataset.type));paintRaidd('All');
+document.querySelector('#gate-list').innerHTML=gates.map(([id,name,status,ready])=>`<div class="gate"><div class="gate-head"><strong>${id}: ${escapeHtml(name)}</strong><span class="status ${status==='At Risk'?'risk':''}">${status}</span></div><p class="muted">Ready when: ${escapeHtml(ready)}</p></div>`).join('');
+document.querySelector('#lesson-list').innerHTML=lessons.map(([name,text])=>`<div class="lesson"><strong>${escapeHtml(name)}</strong><p class="muted">${escapeHtml(text)}</p></div>`).join('');
 </script>
 </body>
 </html>
