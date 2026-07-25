@@ -53,6 +53,7 @@
 <style>body{background:var(--ivory)}.ops-app{display:grid;grid-template-columns:270px 1fr;min-height:70vh}.side{background:var(--charcoal);color:#fffaf4;padding:22px;display:flex;flex-direction:column;gap:16px}.side img{width:160px;background:#fff;border-radius:10px}.side button{background:transparent;color:#efe6db;border:1px solid rgba(230,221,210,.16);border-radius:12px;padding:12px;text-align:left;font-weight:800;cursor:pointer}.side button.active,.side button:hover{background:var(--mocha)}.ops-main{padding:28px;min-width:0}.view{display:none}.view.active{display:block}.table-wrap{overflow:auto;background:var(--paper);border:1px solid var(--taupe);border-radius:18px}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:12px;border-bottom:1px solid var(--taupe);text-align:left;font-size:14px}th{color:var(--mocha);background:#f0e7dc}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.filter.active{background:var(--charcoal);color:white}.vendor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.toast{position:fixed;right:20px;bottom:20px;background:var(--charcoal);color:#fff;padding:13px 16px;border-radius:12px;display:none}.toast.show{display:block}@media(max-width:900px){.ops-app{grid-template-columns:1fr}.side{position:static}.vendor-grid{grid-template-columns:1fr}}</style>
 </head>
 <body>
+<noscript><style>.view{display:block!important;margin-bottom:32px}.side button,.toolbar{display:none!important}</style></noscript>
 <header class="site-header">
 <div class="wrap nav-inner">
 <a class="brand" href="../index.html#home">
@@ -130,6 +131,8 @@
 </tr>
 </thead>
 <tbody id="dashrows">
+<tr><td><b>SB-101</b><br><span class="muted">Dune House</span></td><td>4:00</td><td><span class="status ok">Complete</span></td><td><span class="status ok">Complete</span></td><td><span class="status ok">No Issues</span></td><td><span class="status ok">ready</span></td><td>J. Lee</td></tr>
+<tr><td><b>SB-103</b><br><span class="muted">Pier View</span></td><td>4:00</td><td><span class="status ok">Complete</span></td><td><span class="status watch">Pending</span></td><td><span class="status risk">Urgent HVAC</span></td><td><span class="status risk">risk</span></td><td>M. Adams</td></tr>
 </tbody>
 </table>
 </div>
@@ -157,6 +160,8 @@
 </tr>
 </thead>
 <tbody id="turnrows">
+<tr><td><b>SB-101</b><br><span class="muted">Dune House</span></td><td>10:00</td><td>4:00</td><td><span class="status ok">Complete</span></td><td><span class="status ok">Complete</span></td><td><span class="status ok">No Issues</span></td><td><span class="status ok">Approved</span></td><td><span class="status ok">ready</span></td><td>Details available with JavaScript enabled.</td></tr>
+<tr><td><b>SB-103</b><br><span class="muted">Pier View</span></td><td>10:30</td><td>4:00</td><td><span class="status ok">Complete</span></td><td><span class="status watch">Pending</span></td><td><span class="status risk">Urgent HVAC</span></td><td><span class="status watch">Pending</span></td><td><span class="status risk">risk</span></td><td>Details available with JavaScript enabled.</td></tr>
 </tbody>
 </table>
 </div>
