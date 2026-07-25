@@ -27,10 +27,14 @@
 .gov-teaser-naics .code{font-family:'IBM Plex Mono',ui-monospace,monospace;color:var(--orange-text);font-weight:700;flex:none;width:60px}
 .gov-teaser-naics .label{color:var(--stone);line-height:1.4}
 @media(max-width:900px){.gov-teaser-grid{grid-template-columns:1fr}}
+.hero-contract-codes{display:flex;flex-wrap:wrap;gap:10px 22px;margin:20px 0;padding:14px 16px;background:var(--paper);border:1px solid var(--taupe);border-left:4px solid var(--orange);border-radius:12px;box-shadow:0 8px 22px rgba(1,28,71,.05)}
+.hero-contract-codes div{display:flex;align-items:baseline;gap:10px}
+.hero-contract-codes dt{font-family:'IBM Plex Mono',ui-monospace,monospace;color:var(--orange-text);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.hero-contract-codes dd{margin:0;color:var(--charcoal);font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:700}
+@media(max-width:560px){.hero-contract-codes{display:grid;gap:8px}.hero-contract-codes div{align-items:flex-start}.hero-contract-codes dd{line-height:1.55}}
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.contact-grid .contact-card{margin-top:0}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
 
 @media(max-width:900px){.service-grid{grid-template-columns:1fr}}
 .skip-link{position:fixed;top:8px;left:8px;z-index:1000;padding:10px 14px;border-radius:10px;background:var(--charcoal);color:#fff;font-weight:850;transform:translateY(-160%);transition:transform .18s ease}.skip-link:focus{transform:translateY(0)}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.metric-value{font-size:28px;font-weight:850;line-height:1.2;margin:6px 0}.metric.primary .metric-value{font-size:clamp(34px,4vw,46px);color:var(--watch)}.metric.secondary .metric-value{font-size:22px;color:var(--stone)}.metric-status-value{margin:6px 0}.mobile-menu{min-width:44px;min-height:44px;align-items:center;justify-content:center;padding:0}@media(max-width:900px){.mobile-menu{display:flex}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skip-link,.button,.nav-cta,.card{transition:none}.button:hover,.nav-cta:hover,.card:hover{transform:none}}
 .tab-list button[aria-pressed=true],.phase-list button[aria-pressed=true]{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
-
