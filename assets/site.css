@@ -50,5 +50,5 @@
 .tab-list button[aria-pressed=true],.phase-list button[aria-pressed=true]{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
 
 /* Shared orange glow at the top of primary page content. */
-.project-hero{background:radial-gradient(ellipse at 84% 0%,rgba(235,100,8,.13),transparent 46%),linear-gradient(180deg,#fffaf4,var(--ivory))}
-@media(max-width:760px){.hero,.project-hero{background:radial-gradient(ellipse at 86% 0%,rgba(235,100,8,.16),transparent 54%),linear-gradient(180deg,#fffaf4,var(--ivory))}}
+.hero,.project-hero{background:radial-gradient(ellipse at 84% 0%,rgba(235,100,8,.18),transparent 58%),linear-gradient(180deg,#fffaf4,var(--ivory))}
+@media(max-width:760px){.hero,.project-hero{background:radial-gradient(ellipse at 86% 0%,rgba(235,100,8,.20),transparent 62%),linear-gradient(180deg,#fffaf4,var(--ivory))}}
