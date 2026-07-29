@@ -57,6 +57,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+.home-positioning-grid{grid-template-columns:repeat(3,1fr)}
+.home-positioning-grid .value-item{border-top:5px solid var(--taupe)}
+.home-positioning-grid .aviation-positioning{border-top-color:var(--orange)}
+.home-positioning-grid .defense-positioning{border-top-color:var(--charcoal)}
+.home-positioning-grid .prime-positioning{border-top-color:var(--mocha)}
+.home-positioning-grid .value-item h2{font-size:18px}
+.home-positioning-grid .value-item a{display:inline-flex;margin-top:8px;color:var(--charcoal);font-size:13px;font-weight:850;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:820px){.home-positioning-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -81,8 +91,8 @@
 <div class="wrap hero-top">
 <div>
 <div class="eyebrow">Aviation Operations • Project Controls • Program Support</div>
-<h1 id="hero-title">Aviation Operations Support &amp; Project Execution for Defense Programs</h1>
-<p class="lead">Flowshua Projects helps aviation and defense organizations improve readiness and execution through project controls, maintenance planning support, operational coordination, technical documentation, scheduling, and program support.</p>
+<h1 id="hero-title">Aviation &amp; Defense Program Support</h1>
+<p class="lead">Aviation-informed program support, PMO coordination, project controls, readiness analysis, and subcontract execution for defense programs.</p>
 <p><strong>Grounded in six years of U.S. Navy aviation maintenance, quality assurance, and operational readiness experience, with the discipline to coordinate complex work and drive accountable execution.</strong></p>
 <dl class="hero-contract-codes" aria-label="Primary federal contracting codes">
 <div><dt>NAICS</dt><dd>541611 · 541614 · 541618</dd></div>
@@ -102,11 +112,10 @@
 </div>
 </div>
 <div class="wrap">
-<div class="value-grid">
-<div class="value-item"><div class="num">01</div><h2>Aviation Operations</h2><p>Readiness coordination, maintenance planning support, quality discipline, and technical workflow visibility.</p></div>
-<div class="value-item"><div class="num">02</div><h2>Project Controls</h2><p>Schedules, milestones, actions, risks, issues, dependencies, and status reporting that keep work visible.</p></div>
-<div class="value-item"><div class="num">03</div><h2>Technical Coordination</h2><p>Clear documentation and coordination across maintenance, logistics, quality, supply, and leadership teams.</p></div>
-<div class="value-item"><div class="num">04</div><h2>Subcontract Support</h2><p>Flexible support for defined work packages or embedded roles within established prime-contractor and program teams.</p></div>
+<div class="value-grid home-positioning-grid">
+<div class="value-item aviation-positioning"><div class="num">01</div><h2>Aviation Program Support</h2><p>Readiness coordination, maintenance planning support, quality discipline, technical documentation, and aviation-informed analysis.</p></div>
+<div class="value-item defense-positioning"><div class="num">02</div><h2>Defense Program Support</h2><p>PMO coordination, project controls, schedule discipline, risk tracking, reporting, and execution visibility for defense programs.</p></div>
+<div class="value-item prime-positioning"><div class="num">03</div><h2>Prime Contractor Support</h2><p>Embedded program support and defined work-package execution within established prime-contractor teams.</p><a href="/government/">Explore Prime Contractor Support</a></div>
 </div>
 </div>
 </section>
