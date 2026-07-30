@@ -1,2 +1,2 @@
 # flowshua-website
-Flowshua Projects website and portfolio prototypes
+Production website for Flowshua Projects, an aviation-informed defense program support company.
