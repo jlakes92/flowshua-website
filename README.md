@@ -1,2 +1,2 @@
 # flowshua-website
-Production website for Flowshua Projects LLC, an SBA-certified SDVOSB providing technical project and program support, aviation program support, and project controls to defense and aviation organizations.
+Production website for Flowshua Projects LLC, an SBA-certified SDVOSB and owner-led technical project and program support company with an aviation and quality foundation.
